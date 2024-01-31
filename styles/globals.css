@@ -1,0 +1,26 @@
+/*
+    main palette:
+    - 231C07    Smoky Black
+    - 392A16    Bistre
+    - 123524    Plathlo green
+    - EAEAEA    Platinum
+    - 38744D    Dark spring green
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Inter&display=swap');
+
+html,
+body {
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    background-color: #231c07;
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}

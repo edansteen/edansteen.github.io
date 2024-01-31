@@ -1,0 +1,51 @@
+.footer {
+    width: 100vw;
+    background-color: rgb(233, 233, 233);
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    flex-direction: row;
+    align-items: center;
+    gap: 10%;
+    padding: 0px 0px 40px 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.footer > div {
+    width: 20vw;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.footer > div > span {
+    cursor: pointer;
+    padding-bottom: 10px;
+}
+
+.footer>div>span>a:hover {
+    opacity: .6;
+}
+.footer > div > h4 {
+    color: #228B22;
+}
+
+.contact {
+    transition: ease-in 0.5s;
+}
+
+.contact>span:hover{
+    cursor:text;
+}
+
+.copyright {
+    background-color: #333;
+    width: 100vw;
+    height: auto;
+    text-align: center;
+    position: absolute;
+    padding-bottom: 5px;
+    color: rgb(150, 150, 150);
+    font-size: 0.7rem;
+}

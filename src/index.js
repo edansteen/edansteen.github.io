@@ -1,17 +1,36 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Head from 'next/head';
+import styles from '../styles/Main.module.css';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import { useRouter } from 'next/router';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+export default function Main() {
+    const router = useRouter();
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+    return(
+        <>
+            <Head>
+                <title>Edan Steen</title>
+                <meta name="description" content="Portfolio of various projects."/>
+                <link rel="icon" href="logo.png"/>
+            </Head>
+
+            <Navbar/>
+            
+            <main className={styles.main}>
+                <div className='indexSection'> join now!
+
+                    <button onClick={() => router.push("/join")} className={styles.sectionButton}>
+                        Apply
+                    </button>
+                </div>
+
+                <div>project info here</div>
+                
+                <div>team info here</div>
+
+                <Footer/>
+            </main>
+        </>
+    );
+}
