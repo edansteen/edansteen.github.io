@@ -32,10 +32,13 @@ function Navbar() {
         </a>
         <div className={styles.linksContainer}>
             <span onClick={() => router.push('/')}>
-              Home
-            </span>
-            <span onClick={() => router.push('/projects')}>
               Projects
+            </span>
+            <span onClick={() => router.push('/')}>
+              About
+            </span>
+            <span onClick={() => router.push('/')}>
+              Contact
             </span>
         </div>
       </nav>
