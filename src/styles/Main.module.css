@@ -1,0 +1,41 @@
+/*
+ * Colours:
+ *  #228B22 green
+ * 
+*/
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.main > div {
+  width: 100%;
+}
+.sectionTitle {
+  color: #228B22;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* buttons in sectons */
+.sectionButton {
+  padding: 12px 24px;
+  cursor: pointer;
+  color: white;
+  font-size: 1.1rem;
+  background-color: #228B22;
+  border-color: transparent;
+  border-radius: 10px;
+  transition: ease-in 0.25s;
+  text-align: center;
+}
+.sectionButton:hover {
+  color: #228B22;
+  background-color: white;
+  border-color: #228B22;
+}

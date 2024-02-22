@@ -12,6 +12,12 @@
     transition: ease-in 0.2s;
 }
 
+.navlogo {
+    background-image: url("../images/shaq.jpeg");
+    width: 50px;
+    height: auto;
+}
+
 .active {
     width: 100vw;
     padding: 30px 0;
@@ -54,22 +60,4 @@
 }
 .linksContainer>span:hover {
     opacity: .6;
-}
-
-.volunteerButton {
-    border: 2px solid #228B22;
-    border-radius: 5px;
-    background-color: #228B22;
-    color: white;
-    padding: 6px 12px;
-    font-size: 1em;
-    transition: ease-in 0.25s;
-    font-weight: normal;
-}
-
-.volunteerButton:hover {
-    color: #228B22;
-    background-color: transparent;
-    transform: scale(1.05);
-    font-weight: 550;
 }

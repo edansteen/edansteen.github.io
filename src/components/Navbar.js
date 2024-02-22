@@ -5,7 +5,6 @@ import styles from '../styles/Navbar.module.css';
 function Navbar() {
   const router = useRouter();
   const [navbar,setNavbar] = useState(false);
-  //const [contact,flashContact] = useState(false);
 
   const changeNavBackground = () => {
     if (window.scrollY >= 1) {
@@ -22,42 +21,21 @@ function Navbar() {
       return () => {
         window.removeEventListener('scroll', changeNavBackground)
       };
-    }, []);
-
-    const flashTitle = () => {
-      let delay = 400;    
-      router.push('#contactTitle');
-      setTimeout(() => {
-        let x = document.getElementById("contact");
-        let ogColor = x.style.backgroundColor;
-        x.style.backgroundColor = "yellow";
-        setTimeout(() => {
-          x.style.backgroundColor = ogColor;
-        }, delay);
-      }, delay);  
-    }     
+    }, []);    
 
   return (
     <>
       <nav className={navbar ? (styles.active) : styles.nav}>
         <a className={styles.navIcon} onClick={() => router.push('/')}>
-          <h2>InvasivePlantsPW</h2>
+          <div className={styles.navlogo}></div>
+          <h2>Edan Steen</h2>
         </a>
         <div className={styles.linksContainer}>
             <span onClick={() => router.push('/')}>
               Home
             </span>
-            <span onClick={() => router.push('/invasivePlants')}>
-              Invasive Species
-            </span>
-            <span onClick={() => router.push('/about')}>
-              About Us
-            </span>
-            <span onClick={flashTitle}>
-              Contact
-            </span>
-            <span className={styles.volunteerButton} onClick={() => router.push('/volunteer')}>
-              Volunteer
+            <span onClick={() => router.push('/projects')}>
+              Projects
             </span>
         </div>
       </nav>
