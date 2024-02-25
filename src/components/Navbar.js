@@ -34,10 +34,10 @@ function Navbar() {
             <span onClick={() => router.push('/')}>
               Projects
             </span>
-            <span onClick={() => router.push('/')}>
+            <span onClick={() => router.push('/#about')}>
               About
             </span>
-            <span onClick={() => router.push('/')}>
+            <span onClick={() => router.push('/#contact')}>
               Contact
             </span>
         </div>

@@ -1,3 +1,15 @@
+/*
+ * Colours:
+  - 231C07    Smoky Black
+  - 392A16    Bistre
+  - 123524    Plathlo green
+  - EAEAEA    Platinum
+  - 38744D    Dark spring green
+
+  - #228B22 green
+ * 
+*/
+
 .nav {
     width: 100vw;
     padding: 30px 0;
@@ -41,7 +53,7 @@
     position: absolute;
     left: 15px;
     cursor: pointer;
-    color: #228B22;
+    color: #38744D;
 }
 
 .linksContainer {
@@ -60,4 +72,5 @@
 }
 .linksContainer>span:hover {
     opacity: .6;
+    transition: 1 ease-in;
 }

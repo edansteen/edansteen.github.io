@@ -27,7 +27,7 @@ export default function Home() {
         <section className={styles.projects}>
           <h1>My Work</h1>
           <div className={styles.projectCards}>
-              <div onClick={() => router.push('/')}>
+              <div>
                 <Image 
                   src={Droidpocalypse}
                   alt='Droidpocalypse gameplay'
@@ -39,7 +39,7 @@ export default function Home() {
                 </div>
               </div>
               
-              <div onClick={() => router.push('/')}>
+              <div>
                 <div>
                   <h4>Snake in Java</h4>
                   <p>The classic computer game "snake" made entirely in Java.</p>
@@ -55,7 +55,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={styles.about}>
+        <section className={styles.about} id='about'>
           <h1>About Me</h1>
 
           <div className={styles.education}>
@@ -63,12 +63,37 @@ export default function Home() {
             <span>University of British Columbia - Vancouver, BC</span>
             <span>September 2023 - Present</span>
           </div>
+          <div>
+            <h2>Experience</h2>
+            <div>
+              <h3>UBC AgroPonics</h3>
+              <span>September 2023 - Present</span>
+              <ul>
+                <li>Did schtuff</li>
+              </ul>
+            </div>
+          </div>
 
+          <div>
+            <h2>Skills</h2>
+            <ul>
+              <li>Arduino - 5 years</li>
+              <li>C/C++ - 3 years</li>
+              <li>JavaScript - 2 years</li>
+            </ul>
+          </div>
         </section>
 
-        <section className={styles.contact}>
+        <section className={styles.contact} id='contact'>
           <h1>Get in touch</h1>
-
+          <ul>
+            <li>
+              Email
+            </li>
+            <li>Github</li>
+            <li>Instagram</li>
+            <li>LinkedIn</li>
+          </ul>
         </section>
       </main>
       <Footer/>
