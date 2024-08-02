@@ -52,6 +52,12 @@ export default function Home() {
                   alt='Photo of gameplay'
                 />
               </div>
+
+              <div>
+                <div>
+                  <h4>Journey to Nowhere</h4>
+                </div>
+              </div>
           </div>
         </section>
 
