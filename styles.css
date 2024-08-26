@@ -22,15 +22,38 @@ nav {
     height: 50px;
     width: 100vw;
     display: flex;
-    flex-direction: row;
-    position: fixed;
-    background-color: whitesmoke;
-    
+    position: absolute;
+    background-color: rgb(0,0,0,0);
+    color: whitesmoke;
+    gap: 10%;
+}
+
+nav > a {
+    margin: auto 10px;
+    cursor: pointer;
+    z-index: 1;
 }
 
 nav > div {
+    width: 100vw;
+    height: 50px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
     
 }
+
+nav>div>a:hover{
+   opacity: 0.5; 
+}
+
+nav > span {
+    z-index: 1;
+    display: none;
+}
+
 
 /* LANDING SECTION*/
 .landing {
@@ -56,25 +79,90 @@ nav > div {
     padding: 10vh 0;
 }
 
+.projects>div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.projects>div>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    height: 40vh;
+    background-color: #AAA;
+    border-radius: 50px;
+    gap: 5%;
+    transition: 0.2s ease-in;
+}
+
+.projects>div>div:hover {
+    transform: scale(1.01);
+}
+
+.projects>div>div>img {
+    width: 40%;
+    height: 95%;
+    border-radius: 40px;
+}
+
+.projects>div>div>div {
+    width: 50%;
+}
+
+.projects>div>div>div>button {
+    color: whitesmoke;
+    background-color: #333;
+    border: 1px solid #333;
+    border-radius: 40px;
+    height: 40px;
+    width: 30%;
+    transition: 0.2s ease-in;
+}
+
+.projects>div>div>div>button:hover {
+    color: #333;
+    background-color: transparent;
+    transform: scale(1.1);
+}
+
 /* FOOTER*/
 footer {
     height: 70vh;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 15vw;
+    flex-direction: column;
     background-color: #333;
     color: whitesmoke;
-    padding-left: 5vw;
 }
 
 footer>div{
+    width: 100vw;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    gap: 15vw;
+    padding-left: 5vw;
+    align-items: center;
+}
+
+footer>div>div{
     display: flex;
     flex-direction: column;
 }
 
-footer>div>a:hover{
+footer>div>div>a:hover{
     cursor: pointer;
+    color: #777;
+}
+
+footer>span {
+    bottom: 0px;
+    width: 100vw;
+    height: 40px;
+    text-align: center;
     color: #777;
 }
 
