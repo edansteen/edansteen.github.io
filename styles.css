@@ -77,6 +77,7 @@ nav > span {
 /* PROJECTS */
 .projects{
     padding: 10vh 0;
+    width: 100vw;
 }
 
 .projects>div{
@@ -91,12 +92,13 @@ nav > span {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 80vw;
+    width: 80%;
     height: 40vh;
     background-color: #AAA;
     border-radius: 50px;
     gap: 5%;
     transition: 0.2s ease-in;
+    margin: 10px 0;
 }
 
 .projects>div>div:hover {
