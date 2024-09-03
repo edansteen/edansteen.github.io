@@ -10,8 +10,8 @@
         <link rel="stylesheet" href="styles.css"/>
     </head>
     <body>
-        <nav>
-            <a href="#">
+        <nav id="nav">
+            <a class="navIcon" href="#">
                 edansteen
             </a>
             <div class="linksContainer" id="links">
@@ -20,15 +20,16 @@
                 <a href="#contact">Contact</a>
             </div>
             <span class="mobileNav" id="mobileNavIcon">
-                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                </svg>
             </span>
         </nav>
 
         <main>
             <div class="landing">
                 <div>
-                    <h1>Check out my projects</h1>
-                    <h4>All made by me.</h4>
+                    <h1>Hi! Welcome To My Website</h1>
                 </div>
             </div>
     
@@ -39,7 +40,10 @@
                         <img src="images/shaq.jpeg"/>
                         <div>
                             <h4>UBC AgroPonics Website</h4>
-                            <a href="https://ubcagroponics.com" target="_blank">https://ubcagroponics.com</a>
+                            <a href="https://ubcagroponics.com" target="_blank">
+                                <span>https://ubcagroponics.com</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg>
+                            </a>
                             <p>The website I created for my engineering design team.</p>
                             <button onclick="location.href='https://ubcagroponics.com'">More Info</button>
                         </div>
@@ -48,7 +52,10 @@
                         <img src="images/shaq.jpeg"/>
                         <div>
                             <h4>Droidpocalypse</h4>
-                            <a href="https://udonoodles.itch.io/droidpocalypse" target="_blank">https://udonoodles.itch.io/droidpocalypse</a>
+                            <a href="https://udonoodles.itch.io/droidpocalypse" target="_blank">
+                                <span>https://udonoodles.itch.io/droidpocalypse</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg>
+                            </a>
                             <p>A robot survival game created for a high school capstone project using Godot v3.5.1. Heavily inspired by Vampire Survivors.</p>
                             <button onclick="location.href='https://udonoodles.itch.io/droidpocalypse'" value="Play Droidpocalypse on itch.io">Visit</button>
                         </div>
@@ -57,7 +64,10 @@
                         <img src="images/shaq.jpeg"/>
                         <div>
                             <h4>Snake in Java</h4>
-                            <a href="https://github.com/EdanSteen/snake" target="_blank">https://github.com/EdanSteen/snake</a>
+                            <a href="https://github.com/EdanSteen/snake" target="_blank">
+                                <span>https://github.com/EdanSteen/snake</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg>
+                            </a>
                             <p>The classic game Snake made in pure Java.</p>
                             <button onclick="location.href='https://github.com/EdanSteen/snake'" value="Check it out on my GitHub">See GitHub</button>
                         </div>
@@ -72,6 +82,11 @@
                 </div>
             </div>
         </main>
+
+        <div id="infoModal">
+            <button id="closeModal"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button>
+            
+        </div>
         
         <footer>
             <div>
@@ -91,7 +106,6 @@
                 Copyright 2024 by Edan Steen
             </span>
         </footer>
-
-        <script src="script.js" type="module"></script>
+        <script src="navbar_script.js"></script>
     </body>
 </html>
