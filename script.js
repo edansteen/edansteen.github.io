@@ -23,15 +23,6 @@ const changeNavBackground = () => {
 /*
 * Used for the mobile menu button of the navbar
 */
-function toggleLinks() {
-    let x = getElementById("links");
-
-    if (linksHidden) {
-      x.style.visibility = true;
-    }
-    else {
-      x.style.visibility = false;
-    }           
-    
-    linksHidden = !linksHidden;
+document.getElementById("mobileNavIcon").onclick = function() {
+  document.getElementById("links").style.visibility = "visible";
 }

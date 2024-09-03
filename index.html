@@ -8,8 +8,6 @@
         <meta name='viewport' content='width=device-width, initial-scale=1'/>
         <link rel="icon" href="images/favicon.ico"/>
         <link rel="stylesheet" href="styles.css"/>
-
-        <script src="script.js" type="module"></script>
     </head>
     <body>
         <nav>
@@ -17,11 +15,11 @@
                 edansteen
             </a>
             <div class="linksContainer" id="links">
-                <a href="#projectCards">Projects</a>
+                <a href="#projects">Projects</a>
                 <a href="https://edansteen.blogspot.com" target="_blank">Blog</a>
                 <a href="#contact">Contact</a>
             </div>
-            <span class="mobileMenu">
+            <span class="mobileNav" id="mobileNavIcon">
                 
             </span>
         </nav>
@@ -34,23 +32,23 @@
                 </div>
             </div>
     
-            <div class="projects">
-                <h1>Check out my work</h1>
+            <div class="projects" id="projects">
+                <h1>Highlighted Projects</h1>
                 <div id="projectCards">
                     <div>
                         <img src="images/shaq.jpeg"/>
                         <div>
                             <h4>UBC AgroPonics Website</h4>
-                            <a href="https://ubcagroponics.com">https://ubcagroponics.com</a>
+                            <a href="https://ubcagroponics.com" target="_blank">https://ubcagroponics.com</a>
                             <p>The website I created for my engineering design team.</p>
-                            <button onclick="location.href='https://ubcagroponics.com'" value="Go to ucbagroponics.com">Visit</button>
+                            <button onclick="location.href='https://ubcagroponics.com'">More Info</button>
                         </div>
                     </div>
                     <div>
                         <img src="images/shaq.jpeg"/>
                         <div>
                             <h4>Droidpocalypse</h4>
-                            <a href="https://udonoodles.itch.io/droidpocalypse">https://udonoodles.itch.io/droidpocalypse</a>
+                            <a href="https://udonoodles.itch.io/droidpocalypse" target="_blank">https://udonoodles.itch.io/droidpocalypse</a>
                             <p>A robot survival game created for a high school capstone project using Godot v3.5.1. Heavily inspired by Vampire Survivors.</p>
                             <button onclick="location.href='https://udonoodles.itch.io/droidpocalypse'" value="Play Droidpocalypse on itch.io">Visit</button>
                         </div>
@@ -59,35 +57,41 @@
                         <img src="images/shaq.jpeg"/>
                         <div>
                             <h4>Snake in Java</h4>
-                            <a href="https://github.com/EdanSteen/snake">https://github.com/EdanSteen/snake</a>
+                            <a href="https://github.com/EdanSteen/snake" target="_blank">https://github.com/EdanSteen/snake</a>
                             <p>The classic game Snake made in pure Java.</p>
                             <button onclick="location.href='https://github.com/EdanSteen/snake'" value="Check it out on my GitHub">See GitHub</button>
                         </div>
                     </div>
                 </div>  
             </div>
+
+            <div class="misc" style="display: none;">
+                <h1>Miscellaneous Projects</h1>
+                <div>
+                    <a>HackerTyper clone</a>
+                </div>
+            </div>
         </main>
         
         <footer>
             <div>
                 <div>
-                    <h3 id="contact">Contact Me</h3>
+                    <h3 id="contact">Reach Out</h3>
                     <a href="mailto:edansteen@outlook.com">edansteen@outlook.com</a>
-    
-                </div>
-                <div>
-                    <h3>Follow me</h3>
                     <a href="https://github.com/edansteen" target="_blank">GitHub</a>
-                    <a href="https://udonoodles.itch.io/" target="_blank">itch.io</a>
+                    <a href="https://www.linkedin.com/in/edan-steen-9b675b2aa/">LinkedIn</a>
                 </div>
                 <div>
                     <h3>Support My Work</h3>
                     <a href="https://buymeacoffee.com/edansteen">buymeacoffee.com/edansteen</a>
+                    <a href="https://udonoodles.itch.io/" target="_blank">itch.io</a>
                 </div>
             </div>
             <span>
                 Copyright 2024 by Edan Steen
             </span>
         </footer>
+
+        <script src="script.js" type="module"></script>
     </body>
 </html>
