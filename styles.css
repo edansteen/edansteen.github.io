@@ -293,8 +293,12 @@ footer>span {
         font-size: small;
         overflow-wrap: anywhere;
     }
+    .projects>div>div>div>a>span {
+        width: 80%;
+    }
     .projects>div>div>div>a>svg {
-        display: none;
+        width: 20px;
+        height: 20px;
     }
 
     footer>div {
