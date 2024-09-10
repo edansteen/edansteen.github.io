@@ -138,6 +138,7 @@ nav>div>a:hover{
     width: 40%;
     height: 95%;
     border-radius: 10px;
+    object-fit: cover;
 }
 
 .projects>div>div>div {
@@ -176,46 +177,6 @@ nav>div>a:hover{
     margin: auto 0;
     height: 20px;
     width: 20px;
-}
-
-#infoModal {
-    z-index: 2;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgb(0,0,0,0.7);
-    display: none;
-}
-
-#closeModal {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    border: none;
-    background-color: transparent;
-    transition: 0.2s ease-in;
-}
-
-#closeModal:hover {
-    opacity: 0.7;
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-#closeModal>svg {
-    fill: var(--accent);
-    height: 40px;
-    width: 40px;
-}
-
-#infoModal>div {
-    border-radius: 20px;
-    position: sticky;
-    width: 90%;
-    height: 90%;
-    background-color: white;
 }
 
 /* FOOTER*/
@@ -258,23 +219,59 @@ footer>span {
 @media only screen and (max-width: 600px) {
     
     .navIcon {
-        position: absolute;
+        position: relative;
         top: 10px;
         left: 10px;
     }
 
+    #close {
+        display: none;
+    }
+
     .linksContainer {
-        position: fixed;
         height: 100vh;
         width: 90vw;
         background-color: var(--background);
+        display: none;
+    }
+
+    .linksContainer>a:hover {
+        color: var(--accent);
+        cursor: pointer;
+    }
+
+    .block  {
+        z-index: 4;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgb(0,0,0,0.7);
+        width: 100vw;
+        height: 100vh;
+        display: none;
+    }
+
+    .stop-scroll {
+        height: 100%;
+        overflow-y: hidden;
+    }
+
+    .active {
+        display: flex;
         flex-direction: column;
         z-index: 5;
-        visibility: hidden;
-    }
+        position: fixed;
+        right: 0;
+        top: 0;
+        justify-content: center;
+        align-items: center;
+        gap: 10vh;
+        overflow: hidden;
+    }   
 
     .mobileNav {
         visibility: visible;
+        z-index: 10;
     }
 
     .projects {
@@ -283,6 +280,10 @@ footer>span {
 
     .projects>h1 {
         margin-left: 5vw;
+    }
+
+    .projects>div>div{
+     height: min-content;
     }
 
     .projects>div>div>div>button {
