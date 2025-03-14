@@ -1,0 +1,96 @@
+.footer {
+    width: 100vw;
+    height: fit-content;
+    background-color: #181818;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: medium;
+}
+
+.footerCols {
+    display: flex;
+    gap: 5vw;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2vh;
+}
+
+.footerCols > div {
+    width: 20vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footerCols > div > span {
+    cursor: pointer;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.footerCols>div>span>a:hover {
+    opacity: .6;
+}
+
+.footerCols>div>span>svg {
+    height: 30px;
+    width: 30px;
+}
+
+.footerCols > div > h4 {
+    color: #228B22;
+}
+
+.contact {
+    transition: ease-in 0.5s;
+}
+
+.contact>span:hover{
+    cursor:text;
+}
+
+.copyright {
+    background-color: #E9E9E9;
+    width: 100cw;
+    height: auto;
+    text-align: center;
+    padding-bottom: 5px;
+    color: rgb(150, 150, 150);
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+
+.copyright:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+    .footer, .copyright {
+        width: 100vw;
+    }
+    .footer {
+        gap: 10vh;
+    }
+    .footerCols {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        gap: 5vh;
+    }
+    .footer>div {
+        width: 80%;
+        text-align: center;
+        margin: auto 0;
+    }
+    .footer > div > span {
+        margin: auto;
+        padding-bottom: 5px;
+    }
+}

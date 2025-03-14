@@ -1,0 +1,162 @@
+.projectLanding {
+    height: 70vh;
+    width: 100%;
+    background-image: url("../images/shaq.jpeg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    color: white;
+    font-family: Comfortaa;
+}
+
+.projectLanding>div {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0,0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.projectLanding>div>h1 {
+    font-size: 50pt;
+    font-weight: normal;
+}
+
+.projectLanding>div>h2 {
+    font-weight: 600;
+}
+
+.blurb {
+    text-align: center;
+    font: 2rem;
+    color: #444;
+    margin: 10vh 0;
+    width: 100vw;
+}
+.blurb>p {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.subteams {
+    width: 100%;
+    margin-bottom: 100px;
+    background-color: whitesmoke;
+}
+
+.subteams > div {
+    display: flex;
+    flex-direction: column;
+    margin: 2% auto;
+}
+
+.subteams>div>h2{
+    color: #228B22;
+    text-align: center;
+}
+
+/* SUBTEAM CARDS */
+.subteamArticles {
+    display: flex;
+    flex-direction: row;
+    gap: 15vw;
+    height: 30vh;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.suggestedArticle {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    transition: 0.2s ease-in;
+    width: 10vw;
+    height: 10vw;
+    text-align: center;
+}
+
+.suggestedArticle :hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.suggestedArticle > a > img {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 20px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    
+    .projectLanding>div>h1 {
+        font-size: 40pt
+    }
+    
+    .projectLanding>div>h2 {
+        font-size: 15pt;
+    }
+
+    .blurb {
+        width: 90%;
+        margin: 10vh auto;
+    }
+    .blurb>p{
+        width: 100%;
+    }
+
+    .subteams>div {
+        height: 50vh;
+    }
+
+    .subteams>div>h2{
+        text-align: center;
+    }
+
+    .subteams>div>div {justify-content: center;}
+
+
+    /* SUBTEAM CARDS */
+    .subteamArticles {
+        display: flex;
+        flex-direction: row;
+        gap: 15vw;
+        height: 25vh;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .suggestedArticle {
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        transition: 0.2s ease-in;
+        width: 20vh;
+        height: 20vh;
+        text-align: center;
+        text-wrap: auto;
+    }
+
+    .suggestedArticle :hover {
+        cursor: pointer;
+        transform: scale(1.05);
+    }
+
+    .suggestedArticle > a > img {
+        width: 15vh;
+        height: 15vh;
+        border-radius: 20px;
+    }
+
+}

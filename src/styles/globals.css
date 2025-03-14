@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Inter&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+  --accent: #9e0000;  
+  --secondary: #228B22;
+  --reg_text: whitesmoke;
+  --background: rgb(24, 24, 24);
+  --heading-font: 'Rubik';
+  --text-font: 'Inter', sans-serif;
+  --footer-contact: #777;
+}
+
+html,
+body {
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  background-color: var(--background);
+  color: var(--reg_text);
+  /*font-family: 'Inter', sans-serif;*/
+  font-family: 'Raleway';
+}
+
+body, main {
+  width: 100vw;
+  position: relative;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  font-size: large;
+}
+
+img {
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 600px) {
+
+}
