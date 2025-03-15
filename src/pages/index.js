@@ -81,8 +81,8 @@ export default function Home({allPostsData}) {
           <div className={styles.projectGroup}>
             <h2>Software</h2>
             <ul className={styles.subteamArticles}>
-                {allPostsData.map(({ id, cover_image, title, subteam }) => (
-                (subteam === "software") ?
+                {allPostsData.map(({ id, cover_image, title, topic }) => (
+                (topic === "software") ?
                 <li className={styles.suggestedArticle} key={id}>
                     <Link href={`/projects/${id}`}>
                         <img src={`/projectIMGs/${cover_image}`}/>
@@ -97,8 +97,8 @@ export default function Home({allPostsData}) {
           <div className={styles.projectGroup}>
             <h2>Miscellaneous</h2>
             <ul className={styles.subteamArticles}>
-                {allPostsData.map(({ id, cover_image, title, subteam }) => (
-                (subteam === "software") ?
+                {allPostsData.map(({ id, cover_image, title, topic }) => (
+                (topic === "misc") ?
                 <li className={styles.suggestedArticle} key={id}>
                     <Link href={`/projects/${id}`}>
                         <img src={`/projectIMGs/${cover_image}`}/>

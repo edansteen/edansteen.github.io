@@ -40,6 +40,15 @@
     line-height: 1.5;
 }
 
+.articleBody > a {
+    color: #228B22;
+    text-decoration: underline;
+}
+
+.articleBody>a:hover{
+    opacity: 0.7;
+}
+
 .coverIMG {
     width: 100vw;
     height: 50vh;
