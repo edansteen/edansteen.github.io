@@ -36,7 +36,7 @@ export default function Home({allPostsData}) {
             <span className={styles.landingTitle}>Project Portfolio</span>
             <div>
               <h1>Edan Steen</h1>
-              <a onClick={() => router.push('/projects')}>
+              <a onClick={() => router.push('/#projects')}>
                 <button className={styles.sectionButton}>Check out my projects</button>
               </a>
             </div>
@@ -46,7 +46,9 @@ export default function Home({allPostsData}) {
         <section className={styles.info} id='about'>
           <div className={styles.infoText}>
             <h1>ABOUT ME</h1>
-            <p>As a man of many mysteries, you may ask what's so special about me. Well. Well well well. I am the Breka Prince buddy.</p>
+            <p>
+              Hi! My name is Edan, and I am currently studying Electrical Engineering at UBC. The fact that you found this website is pretty wild on its own, but feel free to contact me if you have questions!
+            </p>
             <button onClick={() => router.push("#contact")} className={styles.sectionButton}>
               Speak to the prince
             </button>
@@ -63,8 +65,8 @@ export default function Home({allPostsData}) {
           <div className={styles.projectGroup}>
             <h2>Embedded Systems & Firmware</h2>
             <ul className={styles.subteamArticles}>
-                {allPostsData.map(({ id, cover_image, title, subteam }) => (
-                (subteam === "embedded") ?
+                {allPostsData.map(({ id, cover_image, title, topic }) => (
+                (topic === "embedded") ?
                 <li className={styles.suggestedArticle} key={id}>
                     <Link href={`/projects/${id}`}>
                         <img src={`/projectIMGs/${cover_image}`}/>

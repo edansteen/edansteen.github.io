@@ -41,6 +41,7 @@
   flex-direction: column;
   background-color: #DADADD;
   color: white;
+  text-align: center;
 }
 
 .landing>div {

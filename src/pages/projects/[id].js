@@ -1,7 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Head from 'next/head.js';
-import Image from 'next/image.js';
 import Link from 'next/link.js';
 import ArticleLayout from '../../components/ArticleLayout';
 import { getAllPostIds, getPostData, getPostContent, getSortedPostsData } from '../../utils/posts.js';
