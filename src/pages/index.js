@@ -13,7 +13,6 @@ import { getSortedPostsData } from '../utils/posts.js';
 
 // Images
 import OurTeam from "../images/shaq.jpeg";
-import trailerBack from "../images/shaq.jpeg";
 
 export default function Home({allPostsData}) {
   const router = useRouter();
@@ -60,7 +59,7 @@ export default function Home({allPostsData}) {
         </section>
 
         <section className={styles.currentProjects} id='projects'>
-          <h1>Check out some of my projects</h1>
+          <h1>Highlighted Projects</h1>
 
           <div className={styles.projectGroup}>
             <h2>Embedded Systems & Firmware</h2>

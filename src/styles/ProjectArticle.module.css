@@ -33,7 +33,7 @@
 }
 
 .articleBody > h1 {
-    color: #228B22;
+    color: var(--accent);
 }
 
 .articleBody > p {
@@ -41,12 +41,21 @@
 }
 
 .articleBody > a {
-    color: #228B22;
+    color: var(--accent);
     text-decoration: underline;
 }
 
 .articleBody>a:hover{
     opacity: 0.7;
+}
+
+.exampleIMG {
+    height: 60vh;
+    width: 50vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    margin: 0 auto;
 }
 
 .coverIMG {
@@ -67,7 +76,7 @@
 }
 
 .otherArticles > h2 {
-    color: #228B22;
+    color: var(--accent);
 }
 
 .moreArticles {

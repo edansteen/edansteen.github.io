@@ -4,10 +4,10 @@
 
 :root {
   --accent: #9e0000;  
-  --secondary: #228B22;
   --reg_text: whitesmoke;
   --background: rgb(24, 24, 24);
-  --heading-font: 'Rubik';
+  --primary-font: 'Raleway';
+  --heading-font: 'Raleway';
   --text-font: 'Inter', sans-serif;
   --footer-contact: #777;
 }
@@ -20,8 +20,7 @@ body {
   scroll-behavior: smooth;
   background-color: var(--background);
   color: var(--reg_text);
-  /*font-family: 'Inter', sans-serif;*/
-  font-family: 'Raleway';
+  font-family: var(--primary-font);
 }
 
 body, main {

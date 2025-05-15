@@ -31,8 +31,10 @@ export default function Project({ postData, postContent, allPostsData }) {
           <h1>{postData.header}</h1>
           <span>{postData.date}</span>
           <p>{fileBody}</p>
+
           <a href={postData.link} target='_blank'>View on Github</a>
         </div>
+        <div className={styles.exampleIMG} style={{backgroundImage: `url(${`/projectIMGs/${postData.cover_image}`})`}}/>
 
         <div className={styles.otherArticles}> 
           <h2>Check out some other projects:</h2>

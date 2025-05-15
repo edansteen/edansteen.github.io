@@ -67,25 +67,6 @@
     opacity: .6;
 }
 
-.volunteerButton {
-    border: 2px solid #228B22;
-    width: max-content;
-    border-radius: 5px;
-    background-color: #228B22;
-    color: white;
-    padding: 6px 12px;
-    font-size: 1em;
-    transition: ease-in 0.25s;
-    font-weight: normal;
-}
-
-.volunteerButton:hover {
-    color: #228B22;
-    background-color: transparent;
-    transform: scale(1.05);
-    font-weight: 550;
-}
-
 .navButton {
     height: 50px;
     width: 50px;
@@ -165,7 +146,7 @@
     }
 
     .mobileMenu>span:hover {
-        color: #228B22;
+        color: var(--accent);
     }
 
     .coverBackground {
