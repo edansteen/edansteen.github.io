@@ -2,7 +2,7 @@
 title: "UBC Agroponics Website"
 date: "01-2024 - Present"
 id: "agroponics-website"
-cover_image: "agroponics-site.jpg"
+cover_image: "agroponics-site.png"
 topic: 'software'
 link: "https://ubcagroponics.com"
 header: "Website for UBC Agroponics Using Next.js"

@@ -12,7 +12,7 @@ import Footer from '../components/Footer';
 import { getSortedPostsData } from '../utils/posts.js';
 
 // Images
-import OurTeam from "../images/shaq.jpeg";
+import portrait from "../images/shaq.jpeg";
 
 export default function Home({allPostsData}) {
   const router = useRouter();
@@ -46,15 +46,15 @@ export default function Home({allPostsData}) {
           <div className={styles.infoText}>
             <h1>ABOUT ME</h1>
             <p>
-              Hi! My name is Edan, and I am currently studying Electrical Engineering at UBC. The fact that you found this website is pretty wild on its own, but feel free to contact me if you have questions!
+              Hi! My name is Edan, and I am currently studying Electrical Engineering at UBC. This portfolio showcases some of the projects I've worked on over the years. Feel free to contact me if you have questions!
             </p>
             <button onClick={() => router.push("#contact")} className={styles.sectionButton}>
-              Speak to the prince
+              Contact
             </button>
           </div>
           <div className={styles.infoIMG}>
-            <Image src={OurTeam} alt='Some of our teammates'/>
-            <span>Some of our teammates</span>
+            <Image src={portrait} alt='Picture of the prince'/>
+            <span>Picture of the prince</span>
           </div>
         </section>
 

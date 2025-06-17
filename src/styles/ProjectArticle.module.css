@@ -147,4 +147,12 @@
         border-radius: 20px;
     }
 
+    .articleBody > a {
+        margin: 0 auto;
+    }
+
+    .exampleIMG {
+        width: 90vw;
+        height: 40vh;
+    }
 }

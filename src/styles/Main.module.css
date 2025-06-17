@@ -271,10 +271,18 @@
     padding: 0;
   }
 
+  /* PROJECTS SECTION*/
   .currentProjects {
     flex-direction: column-reverse;
     margin-top: 0;
+    width: 90%;
   }
+
+  .currentProjects > h1 {
+    text-align: center;
+    width: 100%;
+  }
+
 
   .infoText,
   .infoIMG {
