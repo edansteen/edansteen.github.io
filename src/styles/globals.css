@@ -3,7 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 :root {
-  --accent: #9e0000;  
+/*  --accent: #9e0000;  */
+  --accent: rgb(135, 78, 155);
   --reg_text: whitesmoke;
   --background: rgb(24, 24, 24);
   --primary-font: 'Raleway';

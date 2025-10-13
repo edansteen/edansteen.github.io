@@ -24,12 +24,11 @@
 
 /* LANDING SECTION */
 .landing {
-  background-image: url("../images/shaq.jpeg");
   font-family: Comfortaa;
   background-position: center;
   background-size: cover;
   background-repeat: none;
-  height: 100vh;
+  height: 60vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -39,7 +38,6 @@
 
 .landing>div {
   padding-top: 99px;
-  background-color: rgb(0, 0, 0, 0.7);
   height: 100%;
   width: 100%;
   display: flex;
@@ -70,26 +68,6 @@
 
 .landing>div>div>a {
   margin: 0 auto;
-}
-
-.agrobot {
-  text-align: center;
-  color: white;
-  font-size: 1rem;
-  background: linear-gradient(
-      rgba(0,0,0,0.7),
-      rgba(0,0,0,0.7)
-    ), url('../images/shaq.jpeg');
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    background-repeat: none;
-    height: 50vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    margin: 10vh;
-    justify-content: center;
 }
 
 /* buttons in sectons */
@@ -179,6 +157,35 @@
   margin: 0 auto;
 }
 
+/* Experience section*/
+
+.experience {
+  width: 60vw;
+}
+
+.experience > h1 {
+  color: var(--accent);
+}
+
+.experience > div {
+  line-height: normal;
+  
+}
+
+.experiencecard > h3 {
+  
+}
+
+.company {
+  font-style: italic;
+}
+
+.dates {
+  float: right;
+}
+
+/*Project section*/
+
 .currentProjects > h1 {
   color: var(--accent);
   font-size: xx-large;
@@ -251,6 +258,11 @@
 @media only screen and (max-width: 600px) {
 
   /* LANDING*/
+
+  .landing {
+    height: 60vh;
+  }
+
   .landingTitle {
     font-size: 3rem;
 

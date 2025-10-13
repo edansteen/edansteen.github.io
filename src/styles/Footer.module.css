@@ -1,5 +1,6 @@
 .footer {
     width: 100vw;
+    height: 30vh;
     height: fit-content;
     background-color: #181818;
     display: flex;
@@ -7,53 +8,38 @@
     text-align: center;
     flex-direction: column;
     align-items: center;
-    padding: 40px 0px;
+    padding: 10vh 0;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-size: medium;
 }
 
-.footerCols {
-    display: flex;
-    gap: 5vw;
-    flex-direction: row;
-    justify-content: center;
-    margin: 2vh;
-}
-
-.footerCols > div {
-    width: 20vw;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footerCols > div > span {
-    cursor: pointer;
-    padding-bottom: 10px;
-    display: flex;
-    flex-direction: row;
-}
-
-.footerCols>div>span>a:hover {
-    opacity: .6;
-}
-
-.footerCols>div>span>svg {
-    height: 30px;
-    width: 30px;
-}
-
-.footerCols > div > h4 {
+.footer > div > h2 {
     color: var(--accent);
 }
 
-.contact {
-    transition: ease-in 0.5s;
+.footer > div > div {
+    display: flex;
+    flex-direction: row;
+    gap: 5vh;
+    margin: 5vh 0;
 }
 
-.contact>span:hover{
-    cursor:text;
+.footer > div > div > a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+.footer > div > div > a > img {
+    color: var(--reg_text);
+}
+
+.footer > div > div > a:hover {
+    opacity: 0.6;
+    transform: scale(1.05);
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -61,19 +47,8 @@
         width: 100vw;
         gap: 10vh;
     }
-    .footerCols {
+
+    .footer > div > div {
         flex-direction: column;
-        height: auto;
-        align-items: center;
-        gap: 5vh;
-    }
-    .footer>div {
-        width: 80%;
-        text-align: center;
-        margin: auto 0;
-    }
-    .footer > div > span {
-        margin: auto;
-        padding-bottom: 5px;
     }
 }

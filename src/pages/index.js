@@ -13,6 +13,7 @@ import { getSortedPostsData } from '../utils/posts.js';
 
 // Images
 import portrait from "../images/shaq.jpeg";
+import ExperienceCard from '@/components/ExperienceCard';
 
 export default function Home({allPostsData}) {
   const router = useRouter();
@@ -58,11 +59,51 @@ export default function Home({allPostsData}) {
           </div>
         </section>
 
+        <section className={styles.experience} id='experience'>
+          <h1>Experience</h1>
+
+          <ExperienceCard
+            title="Captain"
+            company="UBC Biological Internet of Things"
+            dates="Aug 2025 - Present"
+            point1="Did this"
+            point2="Lead the team to success"
+            point3=""
+          />
+
+          <ExperienceCard
+            title="Instrumentation Lead"
+            company="UBC Biological Internet of Things"
+            dates="Jan 2025 - Present"
+            point1="Did this"
+            point2="Lead the team to success"
+            point3=""
+          />
+
+          <ExperienceCard
+            title="Automation Member & Web Developer"
+            company="UBC Agroponics"
+            dates="Sep 2023 - Present"
+            point1="Did this"
+            point2="Lead the team to success"
+            point3=""
+          />
+
+          <ExperienceCard
+            title="Instrumentation Engineering Volunteer"
+            company="Tydra Laboratories"
+            dates="May 2025 - Aug 2025"
+            point1="Did this"
+            point2="Did that"
+            point3=""
+          />
+        </section>
+
         <section className={styles.currentProjects} id='projects'>
           <h1>Highlighted Projects</h1>
 
           <div className={styles.projectGroup}>
-            <h2>Embedded Systems & Firmware</h2>
+            <h2>Electronics & Firmware</h2>
             <ul className={styles.subteamArticles}>
                 {allPostsData.map(({ id, cover_image, title, topic }) => (
                 (topic === "embedded") ?
@@ -93,30 +134,6 @@ export default function Home({allPostsData}) {
             </ul>                        
           </div>
 
-          <div className={styles.projectGroup}>
-            <h2>Miscellaneous</h2>
-            <ul className={styles.subteamArticles}>
-                {allPostsData.map(({ id, cover_image, title, topic }) => (
-                (topic === "misc") ?
-                <li className={styles.suggestedArticle} key={id}>
-                    <Link href={`/projects/${id}`}>
-                        <img src={`/projectIMGs/${cover_image}`}/>
-                        <br/>
-                        {title}
-                    </Link>
-                </li> : null
-                ))}
-            </ul>                        
-          </div>
-
-        </section>
-
-        <section className={styles.agrobot}>
-          <h1>See more on my GitHub</h1>
-          <Link href='https://github.com/edansteen' target='_blank' className={[styles.sectionButton, styles.opensLink].join(" ")}>
-            Check it out
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#f5f5f5"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" /></svg>
-          </Link>
         </section>
       </main>
       <Footer />

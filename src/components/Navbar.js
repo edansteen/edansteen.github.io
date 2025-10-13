@@ -39,15 +39,14 @@ function Navbar(props) {
     <>
       <nav className={(userScrolled || props.setActive) ? (styles.active) : styles.nav}>
         <a className={styles.navIcon} onClick={() => router.push('/#')}>
-          <Image 
-            src={(userScrolled || props.setActive) ? (Logo) : Logo}
-            alt='Our logo'
-          />
           Edan Steen - Portfolio
         </a>
         <div className={menuActive ? (styles.mobileMenu) : styles.linksContainer} onClick={menuActive ? (closeLinks) : null}>
             <span onClick={() => router.push('/')}>
               Home
+            </span>
+            <span onClick={() => router.push('/#experience')}>
+              Experience
             </span>
             <span onClick={() => router.push('/#about')}>
               About

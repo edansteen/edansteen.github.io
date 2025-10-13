@@ -1,0 +1,34 @@
+[
+    {
+        "title": "Captain",
+        "company": "UBC Biological Internet of Things",
+        "dates": "Aug 2025-Present",
+        "point1": "Did this and that",
+        "point2": "Did this and that",
+        "point3": "Did this and that"
+    },
+    {
+        "title": "Instrumentation Lead",
+        "company": "UBC Biological Internet of Things",
+        "dates": "Jan 2025-Present",
+        "point1": "Did this and that",
+        "point2": "Did this and that",
+        "point3": "Did this and that"
+    },
+    {
+        "title": "Automation Member and Web Developer",
+        "company": "UBC Agroponics",
+        "dates": "Aug 2025-Present",
+        "point1": "Did this and that",
+        "point2": "Did this and that",
+        "point3": "Did this and that"
+    },
+    {
+        "title": "Instrumentation Engineering Volunteer",
+        "company": "Tydra Laboratories",
+        "dates": "May 2025-Sep 2025",
+        "point1": "Did this and that",
+        "point2": "Did this and that",
+        "point3": "Did this and that"
+    }
+]
