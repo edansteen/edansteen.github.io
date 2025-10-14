@@ -24,12 +24,9 @@ export default function Home({allPostsData}) {
     <>
       <Head>
         <title>Portfolio - Edan Steen</title>
-        <meta name='title' content='Edan Steen Portfolio' />
-        <meta name="description" content="My name is Edan. I'm currently studying Electrical Engineering at UBC. This site is a compilation of the various projects I've worked on throughout the years."
-        />
+        <meta name="description" content="Project portfolio and personal website of Edan Steen"/>
         <meta charSet='utf-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <link rel="icon" href="https://edansteen.github.io/favicon.ico"/>
       </Head>
       <Navbar />
       <main className={styles.main}>
@@ -56,8 +53,8 @@ export default function Home({allPostsData}) {
             </button>
           </div>
           <div className={styles.infoIMG}>
-            <Image src={portrait} alt='Picture of the prince'/>
-            <span>Picture of the prince</span>
+            <Image src={portrait} alt='Picture of me'/>
+            <span>A picture of me</span>
           </div>
         </section>
 

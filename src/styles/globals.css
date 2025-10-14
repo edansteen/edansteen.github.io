@@ -4,7 +4,7 @@
 
 :root {
 /*  --accent: #9e0000;  */
-  --accent: rgb(135, 78, 155);
+  --accent: #874e9b;
   --reg_text: whitesmoke;
   --background: rgb(24, 24, 24);
   --primary-font: 'Raleway';
@@ -42,6 +42,7 @@ p {
 img {
   object-fit: cover;
 }
+
 
 @media only screen and (max-width: 600px) {
 

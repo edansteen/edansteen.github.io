@@ -26,7 +26,7 @@
 .landing {
   font-family: Comfortaa;
   background-position: center;
-  height: 60vh;
+  height: 90vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -36,7 +36,6 @@
   background: linear-gradient(-45deg, #d74ee6, #783ce7, #1d92bd, #e915b0);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
-	height: 100vh;
 }
 
 .landing>div {
@@ -47,14 +46,6 @@
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center;
-  vertical-align: center;
-}
-
-.landing>div>img {
-  width: 15vw;
-  height: fit-content;
   align-items: center;
   justify-content: center;
   vertical-align: center;
@@ -185,6 +176,7 @@
   text-align: justify;
 }
 
+
 .infoIMG>img {
   height: 50vh;
   width: 40vw;
@@ -304,7 +296,7 @@
   /* LANDING*/
 
   .landing {
-    height: 60vh;
+    height: 70vh;
   }
 
   .landingTitle {
@@ -338,7 +330,6 @@
     text-align: center;
     width: 100%;
   }
-
 
   .infoText,
   .infoIMG {
