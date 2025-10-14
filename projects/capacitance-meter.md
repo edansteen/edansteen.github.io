@@ -4,7 +4,7 @@ date: "03-2025"
 id: "capacitance-meter"
 cover_image: "capacitance-meter.jpg"
 topic: 'embedded'
-link: "https://github.com/edansteen/elec291-partner-labs/tree/main/lab6"
+link: "https://github.com/edansteen/school-projects/tree/main/ELEC291%20Lab%203%20-%20STM32%20Capacitance%20Meter"
 header: "STM32L051 Capacitance Meter and Ohmmeter"
 ---
 This project uses the famous STM32L051 microcontroller, programmed in C, to determine the capacitance of any capacitor between 1 nF and 1 uF. This is done using a 555 timer, which uses the capacitor to determine the frequency at which it will turn on and off. The period of the output of the timer can then be used can be used to calculate the final capacitance. 

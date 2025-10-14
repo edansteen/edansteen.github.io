@@ -4,7 +4,7 @@ date: "01-2025"
 id: "plant-monitor"
 cover_image: "plant-monitor.png"
 topic: 'embedded'
-link: "https://github.com/edansteen/elec291/tree/main/lab3"
+link: "https://github.com/edansteen/school-projects/tree/main/ELEC291%20Lab%203%20-%20Plant%20Monitor"
 header: "Plant Monitor Written with the 8051 Instruction Set on the N76E003 Microcontroller"
 ---
 This simple plant monitor, programmed using the 8051 Instruction Set on a N76E003 microcontroller, reads the temperature and moisture level of a given plant. 
