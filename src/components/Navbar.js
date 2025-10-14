@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import styles from '../styles/Navbar.module.css';
-import Image from 'next/image';
-
-import Logo from '../images/shaq.jpeg';
+import animatedStyles from '../styles/Animations.module.css';
 
 function Navbar(props) {
   const router = useRouter();
@@ -39,7 +37,7 @@ function Navbar(props) {
     <>
       <nav className={(userScrolled || props.setActive) ? (styles.active) : styles.nav}>
         <a className={styles.navIcon} onClick={() => router.push('/#')}>
-          Edan Steen - Portfolio
+          <span className={animatedStyles.gradientText}>Edan Steen - Portfolio</span>
         </a>
         <div className={menuActive ? (styles.mobileMenu) : styles.linksContainer} onClick={menuActive ? (closeLinks) : null}>
             <span onClick={() => router.push('/')}>

@@ -1,0 +1,23 @@
+/* https://codepen.io/jchaffin/pen/KvvqKE */
+
+@keyframes animationgradienttitle {
+  0% {
+      background-position: 0 1600px;
+  }
+  100% {
+      background-position: 1600px 0;
+  }
+}
+
+.gradientText:hover {
+  color: #783ce7;
+  background: -webkit-linear-gradient(left, #d74ee6,#10DDC2 , #d74ee6);
+  background-size: 1600px 200px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-duration: 3s;
+  animation-name: animationgradienttitle;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}

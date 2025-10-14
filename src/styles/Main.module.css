@@ -26,17 +26,21 @@
 .landing {
   font-family: Comfortaa;
   background-position: center;
-  background-size: cover;
-  background-repeat: none;
   height: 60vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   color: white;
   text-align: center;
+  /*ANIMATIONS FOR BG*/
+  background: linear-gradient(-45deg, #d74ee6, #783ce7, #1d92bd, #e915b0);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
 }
 
 .landing>div {
+  background-color: rgb(0,0,0,0.1);
   padding-top: 99px;
   height: 100%;
   width: 100%;
@@ -68,6 +72,46 @@
 
 .landing>div>div>a {
   margin: 0 auto;
+}
+
+/**ANIMATED BG FROM https://codepen.io/jchaffin/pen/KvvqKE**/
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+/* landing button*/
+
+/* buttons in sectons */
+.landingButton {
+  padding: 12px 24px;
+  cursor: pointer;
+  color: white;
+  font-size: 1.1rem;
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 10px;
+  transition: ease-in 0.25s;
+  text-align: center;
+  border: 2px solid var(--reg_text);
+  font-family: Raleway;
+}
+
+.landingButton>a {
+  gap: 5px;
+}
+
+.landingButton:hover {
+  color: var(--reg_text);
+  background-color: var(--background);
+  border-color: var(--reg_text);
+  transform: scale(1.05);
 }
 
 /* buttons in sectons */
