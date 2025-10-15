@@ -67,8 +67,7 @@ export default function Home({allPostsData}) {
           </div>
           </div>
           <div className={styles.infoIMG}>
-            <Image src={portrait} alt='Picture of me'/>
-            
+            <Image src={portrait} alt='Me in the wild'/>
           </div>
         </section>
 

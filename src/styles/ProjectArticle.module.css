@@ -40,9 +40,13 @@
     line-height: 1.5;
 }
 
-.articleBody > a {
-    color: var(--accent);
-    text-decoration: underline;
+.githubLink {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-size: 1rem;
+    margin: 5vh auto;
+    align-items: center;
 }
 
 .articleBody>a:hover{

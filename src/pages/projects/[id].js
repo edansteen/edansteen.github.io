@@ -2,9 +2,12 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Head from 'next/head.js';
 import Link from 'next/link.js';
-import ArticleLayout from '../../components/ArticleLayout';
-import { getAllPostIds, getPostData, getPostContent, getSortedPostsData } from '../../utils/posts.js';
-import styles from '../../styles/ProjectArticle.module.css'
+import Image from 'next/image';
+import ArticleLayout from '@/components/ArticleLayout';
+import { getAllPostIds, getPostData, getPostContent, getSortedPostsData } from '@/utils/posts.js';
+import styles from '@/styles/ProjectArticle.module.css';
+import animatedStyles from '@/styles/Animations.module.css';
+import GitHubLogo from '@/images/socialmedia-icons/github-mark-white.svg';
 
 export default function Project({ postData, postContent, allPostsData }) {
   //An array of each character in the content of the post file
@@ -19,7 +22,7 @@ export default function Project({ postData, postContent, allPostsData }) {
       <Navbar/>
       
       <Head>
-        <title>{postData.title} | UBC Agroponics</title>
+        <title>{postData.title} | Edan Steen</title>
       </Head>
       
       <main className={styles.article}>                
@@ -31,10 +34,17 @@ export default function Project({ postData, postContent, allPostsData }) {
           <h1>{postData.header}</h1>
           <span>{postData.date}</span>
           <p>{fileBody}</p>
-
-          {postData.link === null ? null : <a href={postData.link} target='_blank'>View on Github</a>}
         </div>
         <div className={styles.exampleIMG} style={{backgroundImage: `url(${`/projectIMGs/${postData.cover_image}`})`}}/>
+        
+        <div className={styles.githubLink}>
+          <Image src={GitHubLogo} height={32} width={32} />
+          {postData.link === null ? null : 
+            <a href={postData.link} target='_blank' className={animatedStyles.gradientText}>
+              View on Github
+            </a>
+          }
+        </div>
 
         <div className={styles.otherArticles}> 
           <h2>Check out some other projects:</h2>
@@ -43,7 +53,7 @@ export default function Project({ postData, postContent, allPostsData }) {
               (id != postData.id) ?
               <li className={styles.suggestedArticle} key={id}>
                 <Link href={`/projects/${id}`}>
-                  <img src={`/projectIMGs/${cover_image}`}/>
+                  <Image src={`/projectIMGs/${cover_image}`} width={25} height={25}/>
                   <br/>
                   {title}
                 </Link>
