@@ -53,7 +53,7 @@ export default function Home({allPostsData}) {
           <div className={styles.infoText}>
             <h1>ABOUT ME</h1>
             <p>
-              Hi! My name is Edan, and I am currently studying Electrical Engineering at UBC with a strong interest in IoT and automotive transportation. This portfolio showcases some of the projects I've worked on over the years. Feel free to reach out!
+              Hi! My name is Edan, and I am currently studying Electrical Engineering at the University of British Columbia (UBC). This portfolio showcases some of the projects I've worked on over the years. Feel free to reach out through the links below!
             </p>
             <div>
               <a href='https://github.com/edansteen' target='_blank'>
