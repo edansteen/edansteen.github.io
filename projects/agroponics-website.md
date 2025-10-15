@@ -4,7 +4,7 @@ date: "01-2024 - Present"
 id: "agroponics-website"
 cover_image: "agroponics-site.png"
 topic: 'software'
-link: "https://ubcagroponics.com"
+link: "https://github.com/Agroponics/agroponics-website"
 header: "Website for UBC Agroponics Using Next.js"
 ---
 UBC Agroponics is a student-led engineering design team where our goal is to create a fully automated hydroponic farm on campus. Currently, my role on the team is being the web developer. I built the site completely from scratch, using the Next.js framework (just like this portfolio!).
