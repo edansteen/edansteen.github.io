@@ -181,14 +181,6 @@
   border-radius: 20px;
 }
 
-.infoIMG>span {
-  font-style: italic;
-  color: #777;
-  text-align: center;
-  display: none;
-  margin: 0 auto;
-}
-
 /* Experience section*/
 
 .experience {
@@ -365,8 +357,9 @@
     width: 100%;
   }
 
-  .infoIMG>span{
-    display: inherit;
+  .infoText > div {
+    margin: 5vh auto;
+    gap: 15vw;
   }
 
   .infoText>button {

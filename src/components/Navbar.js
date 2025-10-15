@@ -36,23 +36,20 @@ function Navbar(props) {
   return (
     <>
       <nav className={(userScrolled || props.setActive) ? (styles.active) : styles.nav}>
-        <a className={styles.navIcon} onClick={() => router.push('/#')}>
+        <a className={styles.navIcon} onClick={() => router.push('/')}>
           <span className={animatedStyles.gradientText}>Edan Steen - Portfolio</span>
         </a>
         <div className={menuActive ? (styles.mobileMenu) : styles.linksContainer} onClick={menuActive ? (closeLinks) : null}>
-            <span onClick={() => router.push('/')}>
-              Home
-            </span>
-            <span onClick={() => router.push('/#experience')}>
+            <span onClick={() => router.push('/#experience')} className={animatedStyles.gradientText}>
               Experience
             </span>
-            <span onClick={() => router.push('/#about')}>
+            <span onClick={() => router.push('/#about')} className={animatedStyles.gradientText}>
               About
             </span>
-            <span onClick={() => router.push('/#projects')}>
+            <span onClick={() => router.push('/#projects')} className={animatedStyles.gradientText}>
               Projects
             </span>
-            <span onClick={() => router.push('#contact')}>
+            <span onClick={() => router.push('#contact')} className={animatedStyles.gradientText}>
               Contact
             </span>
         </div>

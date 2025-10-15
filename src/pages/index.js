@@ -15,7 +15,7 @@ import Footer from '../components/Footer';
 import { getSortedPostsData } from '../utils/posts.js';
 
 // Images
-import portrait from "../images/shaq.jpeg";
+import portrait from "../images/me.jpeg";
 import ExperienceCard from '@/components/ExperienceCard';
 import biot from "../images/company-logos/biotlogo.png";
 import agroponics from "../images/company-logos/agroponics.png";
@@ -68,7 +68,7 @@ export default function Home({allPostsData}) {
           </div>
           <div className={styles.infoIMG}>
             <Image src={portrait} alt='Picture of me'/>
-            <span>A picture of me</span>
+            
           </div>
         </section>
 

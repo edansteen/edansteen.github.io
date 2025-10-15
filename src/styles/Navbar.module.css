@@ -63,8 +63,9 @@
     margin: 0;
     padding: 0;
 }
+
 .linksContainer>span:hover {
-    opacity: .6;
+    transform: scale(1.05);
 }
 
 .navButton {
