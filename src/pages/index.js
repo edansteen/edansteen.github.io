@@ -9,7 +9,6 @@ import animatedStyles from '../styles/Animations.module.css';
 
 //Custom components
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 
 // Get data for the posts
 import { getSortedPostsData } from '../utils/posts.js';
@@ -22,6 +21,7 @@ import agroponics from "../images/company-logos/agroponics.png";
 import tydralabs from "../images/company-logos/tydralabs.png";
 import GitHubIcon from "../images/socialmedia-icons/github-mark-white.svg";
 import LinkedInIcon from "../images/socialmedia-icons/linkedin_icon.png";
+import EmailIcon from "../images/socialmedia-icons/email.png"; 
 
 
 export default function Home({allPostsData}) {
@@ -56,11 +56,11 @@ export default function Home({allPostsData}) {
               Hi! My name is Edan, and I am currently studying Electrical Engineering at UBC with a strong interest in IoT and automotive transportation. This portfolio showcases some of the projects I've worked on over the years. Feel free to reach out!
             </p>
             <div>
-              <a>
+              <a href='https://github.com/edansteen' target='_blank'>
                 <Image src={GitHubIcon} height={24} width={24} />
                 <span className={animatedStyles.gradientText}>GitHub</span>
               </a>
-              <a>
+              <a href='https://ca.linkedin.com/in/edan-steen-9b675b2aa' target='_blank'>
                 <Image src={LinkedInIcon} height={24} width={24}/>
                 <span className={animatedStyles.gradientText}>LinkedIn</span>
               </a>
@@ -131,7 +131,7 @@ export default function Home({allPostsData}) {
                 {allPostsData.map(({ id, cover_image, title, topic }) => (
                 (topic === "embedded") ?
                 <li className={styles.suggestedArticle} key={id}>
-                    <Link href={`/projects/${id}`}>
+                    <Link href={`/projects/${id}`} className={animatedStyles.gradientText}>
                         <img src={`/projectIMGs/${cover_image}`}/>
                         <br/>
                         {title}
@@ -147,7 +147,7 @@ export default function Home({allPostsData}) {
                 {allPostsData.map(({ id, cover_image, title, topic }) => (
                 (topic === "software") ?
                 <li className={styles.suggestedArticle} key={id}>
-                    <Link href={`/projects/${id}`}>
+                    <Link href={`/projects/${id}`}  className={animatedStyles.gradientText}>
                         <img src={`/projectIMGs/${cover_image}`}/>
                         <br/>
                         {title}
@@ -158,7 +158,26 @@ export default function Home({allPostsData}) {
           </div>
         </section>
       </main>
-      <Footer />
+
+      <footer className={styles.footer} id="contact">
+      <div>
+            <h2>Get in Touch!</h2>
+            <div>
+              <a href='https://github.com/edansteen' target='_blank' className={animatedStyles.gradientText}>
+                <Image src={GitHubIcon} height={24} width={24} />
+                GitHub
+              </a>
+              <a href='https://ca.linkedin.com/in/edan-steen-9b675b2aa' target='_blank' className={animatedStyles.gradientText}>
+                <Image src={LinkedInIcon} height={24} width={24}/>
+                LinkedIn
+              </a>
+              <a href='mailto:edansteen@outlook.com' className={animatedStyles.gradientText}>
+                <Image src={EmailIcon} height={24} width={24}/>
+                Email
+              </a>
+            </div>
+        </div>
+    </footer>
     </>
   );
 }

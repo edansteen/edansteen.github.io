@@ -105,31 +105,6 @@
   transform: scale(1.05);
 }
 
-/* buttons in sectons */
-.sectionButton {
-  padding: 12px 24px;
-  cursor: pointer;
-  color: white;
-  font-size: 1.1rem;
-  background-color: var(--accent);
-  border-color: transparent;
-  border-radius: 10px;
-  transition: ease-in 0.25s;
-  text-align: center;
-  border: 2px solid var(--accent);
-  font-family: Raleway;
-}
-
-.sectionButton>a {
-  gap: 5px;
-}
-
-.sectionButton:hover {
-  color: var(--accent);
-  background-color: transparent;
-  border-color: var(--accent);
-}
-
 .main>div {
   width: 100%;
 }
@@ -339,6 +314,51 @@
   text-align: center;
 }
 
+/* FOOTER */
+.footer {
+    width: 100vw;
+    height: 30vh;
+    height: fit-content;
+    background-color: #181818;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 10vh 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: medium;
+}
+
+.footer > div > h2 {
+    color: var(--accent);
+}
+
+.footer > div > div {
+    display: flex;
+    flex-direction: row;
+    gap: 5vh;
+    margin: 5vh 0;
+}
+
+.footer > div > div > a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+.footer > div > div > a > img {
+    color: var(--reg_text);
+    border-radius: 5px;
+}
+
+.footer > div > div > a:hover {
+    transform: scale(1.05);
+
+}
+
 /* MOBILE */
 @media only screen and (max-width: 600px) {
 
@@ -465,5 +485,15 @@
       width: 15vh;
       height: 15vh;
       border-radius: 20px;
+  }
+
+  /* FOOTER */
+  .footer {
+    width: 100vw;
+    gap: 10vh;
+  }
+
+  .footer > div > div {
+    flex-direction: column;
   }
 }
