@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 //CSS styles
 import styles from '../styles/Main.module.css';
+import animatedStyles from '../styles/Animations.module.css';
 
 //Custom components
 import Navbar from '../components/Navbar';
@@ -19,6 +20,9 @@ import ExperienceCard from '@/components/ExperienceCard';
 import biot from "../images/company-logos/biotlogo.png";
 import agroponics from "../images/company-logos/agroponics.png";
 import tydralabs from "../images/company-logos/tydralabs.png";
+import GitHubIcon from "../images/socialmedia-icons/github-mark-white.svg";
+import LinkedInIcon from "../images/socialmedia-icons/linkedin_icon.png";
+
 
 export default function Home({allPostsData}) {
   const router = useRouter();
@@ -38,8 +42,8 @@ export default function Home({allPostsData}) {
             <span className={styles.landingTitle}>Project Portfolio</span>
             <div>
               <h1>Edan Steen</h1>
-              <a onClick={() => router.push('/#projects')}>
-                <button className={styles.landingButton}>Check out my projects</button>
+              <a onClick={() => router.push('/#about')}>
+                <button className={animatedStyles.glowOnHover}>Take a look</button>
               </a>
             </div>
           </div>
@@ -49,11 +53,18 @@ export default function Home({allPostsData}) {
           <div className={styles.infoText}>
             <h1>ABOUT ME</h1>
             <p>
-              Hi! My name is Edan, and I am currently studying Electrical Engineering at UBC with a strong interest in IoT and automotive transportation. This portfolio showcases some of the projects I've worked on over the years. Feel free to contact me if you have questions!
+              Hi! My name is Edan, and I am currently studying Electrical Engineering at UBC with a strong interest in IoT and automotive transportation. This portfolio showcases some of the projects I've worked on over the years. Feel free to reach out!
             </p>
-            <button onClick={() => router.push("#contact")} className={styles.sectionButton}>
-              Contact
-            </button>
+            <div>
+              <a>
+                <Image src={GitHubIcon} height={24} width={24} />
+                <span className={animatedStyles.gradientText}>GitHub</span>
+              </a>
+              <a>
+                <Image src={LinkedInIcon} height={24} width={24}/>
+                <span className={animatedStyles.gradientText}>LinkedIn</span>
+              </a>
+          </div>
           </div>
           <div className={styles.infoIMG}>
             <Image src={portrait} alt='Picture of me'/>
@@ -145,7 +156,6 @@ export default function Home({allPostsData}) {
                 ))}
             </ul>                        
           </div>
-
         </section>
       </main>
       <Footer />

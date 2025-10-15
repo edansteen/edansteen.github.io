@@ -160,12 +160,32 @@
   height: min-content;
 }
 
-.infoText>button {
-  width: 20vw;
-}
-
 .infoText>p {
   line-height: 1.75;
+}
+
+.infoText > div {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  gap: 5vw;
+}
+
+.infoText > div > a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+.infoText > div > a > img {
+    color: var(--reg_text);
+    border-radius: 5px;
+}
+
+.infoText div > a:hover {
+    transform: scale(1.05);
 }
 
 .infoIMG {
@@ -178,7 +198,7 @@
 
 
 .infoIMG>img {
-  height: 50vh;
+  height: 40vh;
   width: 40vw;
   object-fit: cover;
   vertical-align: center;
