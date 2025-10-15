@@ -1,9 +1,17 @@
 import React from 'react';
 import styles from '../styles/Main.module.css';
+import Image from 'next/image';
 
 function ExperienceCard(props) {
     return (
         <div className={styles.experiencecard}>
+            <a href={props.companyurl} target='_blank'>
+                <Image 
+                    src={props.companylogo} 
+                    width={32} 
+                    height={32} 
+                />
+            </a>
             <div>
                 <h2>{props.title}</h2>
                 <div>

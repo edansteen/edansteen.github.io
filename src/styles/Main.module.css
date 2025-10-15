@@ -196,7 +196,8 @@
 /* Experience section*/
 
 .experience {
-  width: 60vw;
+  width: 80vw;
+  align-items: center;
 }
 
 .experience > h1 {
@@ -205,11 +206,38 @@
 
 .experience > div {
   line-height: normal;
-  
+  width: 60vw;
+  margin: 0 auto;
 }
 
-.experiencecard > h3 {
-  
+.experiencecard {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.experiencecard > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.experiencecard > div > h2 {
+  margin-top: 0;
+}
+
+.experiencecard > a {
+  text-decoration: none;
+  transition: 0.5s ease-in;
+}
+
+.experiencecard > a > img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 2px 2px 2px #783ce7, -2px -2px 2px #d74ee6;
+}
+
+.experiencecard > a > img {
+  border-radius: 20px;
 }
 
 .company {
@@ -367,24 +395,22 @@
       font-size: 15pt;
   }
 
-  .blurb {
-      width: 90%;
-      margin: 10vh auto;
-  }
-  .blurb>p{
-      width: 100%;
+  .experience > div {
+    width: 100vw;
   }
 
-  .subteams>div {
-      height: 50vh;
+  .experiencecard  {
+    width: 80vw;
   }
 
-  .subteams>div>h2{
-      text-align: center;
+  .experiencecard > div > div {
+    display: flex;
+    flex-direction: column;
   }
 
-  .subteams>div>div {justify-content: center;}
-
+  .experiencecard > div > ul {
+    font-size: small;
+  }
 
   /* SUBTEAM CARDS */
   .subteamArticles {

@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 //Social Media Icons
 import GitHubIcon from "../images/socialmedia-icons/github-mark.svg";
-import LinkedInIcon from "../images/socialmedia-icons/linkedin_icon.svg";
+import LinkedInIcon from "../images/socialmedia-icons/linkedin_icon.png";
 import EmailIcon from "../images/socialmedia-icons/email.svg";
 
 

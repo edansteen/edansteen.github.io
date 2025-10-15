@@ -16,6 +16,9 @@ import { getSortedPostsData } from '../utils/posts.js';
 // Images
 import portrait from "../images/shaq.jpeg";
 import ExperienceCard from '@/components/ExperienceCard';
+import biot from "../images/company-logos/biotlogo.png";
+import agroponics from "../images/company-logos/agroponics.png";
+import tydralabs from "../images/company-logos/tydralabs.png";
 
 export default function Home({allPostsData}) {
   const router = useRouter();
@@ -61,41 +64,51 @@ export default function Home({allPostsData}) {
         <section className={styles.experience} id='experience'>
           <h1>Experience</h1>
 
-          <ExperienceCard
-            title="Captain"
-            company="UBC Biological Internet of Things"
-            dates="Aug 2025 - Present"
-            point1="Managing a team of 30 people, ensuring all sub-teams have the resources they need and are on track to complete objectives as well as compete in competitions."
-            point2="Organized process for recruitment of 10 new members, reaching over 6,000 people and raising overall awareness of the team."
-            point3="Tracking and documenting each sub-team's progress using Microsoft Excel and Google Suite."
-          />
+          <div> 
+            <ExperienceCard
+              title="Captain"
+              company="UBC Biological Internet of Things"
+              companylogo={biot}
+              companyurl="https://ubcbiot.com"
+              dates="Aug 2025 - Present"
+              point1="Managing a team of 30 people, ensuring all sub-teams have the resources they need and are on track to complete objectives as well as compete in competitions."
+              point2="Organized process for recruitment of 10 new members, reaching over 6,000 people and raising overall awareness of the team."
+              point3="Tracking and documenting each sub-team's progress using Microsoft Excel and Google Suite."
+            />
 
-          <ExperienceCard
-            title="Instrumentation Lead"
-            company="UBC Biological Internet of Things"
-            dates="Jan 2025 - Present"
-            point1="Leading a team of 7 people in the development of sensor-based IoT devices for monitoring and automating brewing processes."
-            point2="Organized and currently managing $5,000 IoT fermenter project featuring I2C pH, DO2, temperature, and pressure sensors, PCB with Altium Designer, wireless data transmission with MQTT, and server-side Python scripting."
-            point3="Programmed ESP32 microcontrollers in C++ using ESP-IDF to collect data from pH, temperature, and dissolved oxygen sensors, and to wirelessly transmit the data over WiFi via MQTT to an external PC for data collection."
-          />
+            <ExperienceCard
+              title="Instrumentation Lead"
+              company="UBC Biological Internet of Things"
+              companylogo={biot}
+              companyurl="https://ubcbiot.com"
+              dates="Jan 2025 - Present"
+              point1="Leading a team of 7 people in the development of sensor-based IoT devices for monitoring and automating brewing processes."
+              point2="Organized and currently managing $5,000 IoT fermenter project featuring I2C pH, DO2, temperature, and pressure sensors, PCB with Altium Designer, wireless data transmission with MQTT, and server-side Python scripting."
+              point3="Programmed ESP32 microcontrollers in C++ using ESP-IDF to collect data from pH, temperature, and dissolved oxygen sensors, and to wirelessly transmit the data over WiFi via MQTT to an external PC for data collection."
+            />
 
-          <ExperienceCard
-            title="Automation Member & Web Developer"
-            company="UBC Agroponics"
-            dates="Sep 2023 - Present"
-            point1="Designed and built the team’s website (https://ubcagroponics.com) from scratch using the Next.js JavaScript framework, substantially boosting the team’s visibility and brand image."
-            point2="Collaborated with other members to ensure the site met the team’s needs and incorporated desired features."
-            point3="Programmed ESP32 microcontrollers using PlatformIO IDE to collect data from various sensors for monitoring plants in a hydroponic farm."
-          />
+            <ExperienceCard
+              title="Automation Member & Web Developer"
+              company="UBC Agroponics"
+              companylogo={agroponics}
+              companyurl="https://ubcagroponics.com"
+              dates="Sep 2023 - Present"
+              point1="Designed and built the team’s website (https://ubcagroponics.com) from scratch using the Next.js JavaScript framework, substantially boosting the team’s visibility and brand image."
+              point2="Collaborated with other members to ensure the site met the team’s needs and incorporated desired features."
+              point3="Programmed ESP32 microcontrollers using PlatformIO IDE to collect data from various sensors for monitoring plants in a hydroponic farm."
+            />
 
-          <ExperienceCard
-            title="Instrumentation Engineering Volunteer"
-            company="Tydra Laboratories"
-            dates="May 2025 - Aug 2025"
-            point1="Designed electrical system and computer architecture for a 60L yeast bioreactor, which includes I2C sensors, peristaltic pumps using stepper motors, and a mini PC running a custom Python script."
-            point2="Programmed Arduino R4 to collect data from temperature, pH, and dissolved oxygen I2C sensors."
-            point3="Designed and implemented automated pH regulation system using peristaltic pumps and stepper motor drivers."
-          />
+            <ExperienceCard
+              title="Instrumentation Engineering Volunteer"
+              company="Tydra Laboratories"
+              companylogo={tydralabs}
+              companyurl="https://tydralabs.com"
+              dates="May 2025 - Aug 2025"
+              point1="Designed electrical system and computer architecture for a 60L yeast bioreactor, which includes I2C sensors, peristaltic pumps using stepper motors, and a mini PC running a custom Python script."
+              point2="Programmed Arduino R4 to collect data from temperature, pH, and dissolved oxygen I2C sensors."
+              point3="Designed and implemented automated pH regulation system using peristaltic pumps and stepper motor drivers."
+            />
+          </div>
         </section>
 
         <section className={styles.currentProjects} id='projects'>
