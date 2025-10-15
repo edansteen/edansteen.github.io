@@ -1,6 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import styles from '../styles/Footer.module.css';
+import animatedStyles from '../styles/Animations.module.css';
 import Image from 'next/image';
 
 //Social Media Icons
@@ -17,15 +18,15 @@ function Footer() {
       <div>
             <h2>Get in Touch!</h2>
             <div>
-              <a href='https://github.com/edansteen' target='_blank'>
+              <a href='https://github.com/edansteen' target='_blank' className={animatedStyles.gradientText}>
                 <Image src={GitHubIcon} height={24} width={24} />
                 GitHub
               </a>
-              <a href='' target='_blank'>
+              <a href='https://ca.linkedin.com/in/edan-steen-9b675b2aa' target='_blank' className={animatedStyles.gradientText}>
                 <Image src={LinkedInIcon} height={24} width={24}/>
                 LinkedIn
               </a>
-              <a href='mailto:edansteen@outlook.com'>
+              <a href='mailto:edansteen@outlook.com' className={animatedStyles.gradientText}>
                 <Image src={EmailIcon} height={24} width={24}/>
                 Email
               </a>
