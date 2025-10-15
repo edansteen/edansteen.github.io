@@ -56,13 +56,13 @@ export default function Home({allPostsData}) {
               Hi! My name is Edan, and I am currently studying Electrical Engineering at the University of British Columbia (UBC). This portfolio showcases some of the projects I've worked on over the years. Feel free to reach out through the links below!
             </p>
             <div>
-              <a href='https://github.com/edansteen' target='_blank'>
+              <a href='https://github.com/edansteen' target='_blank' className={animatedStyles.gradientText}>
                 <Image src={GitHubIcon} height={24} width={24} />
-                <span className={animatedStyles.gradientText}>GitHub</span>
+                <span>GitHub</span>
               </a>
-              <a href='https://ca.linkedin.com/in/edan-steen-9b675b2aa' target='_blank'>
+              <a href='https://ca.linkedin.com/in/edan-steen-9b675b2aa' target='_blank' className={animatedStyles.gradientText}>
                 <Image src={LinkedInIcon} height={24} width={24}/>
-                <span className={animatedStyles.gradientText}>LinkedIn</span>
+                <span>LinkedIn</span>
               </a>
           </div>
           </div>
