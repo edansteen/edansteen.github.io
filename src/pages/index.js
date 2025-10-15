@@ -9,6 +9,7 @@ import animatedStyles from '../styles/Animations.module.css';
 
 //Custom components
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 // Get data for the posts
 import { getSortedPostsData } from '../utils/posts.js';
@@ -21,7 +22,6 @@ import agroponics from "../images/company-logos/agroponics.png";
 import tydralabs from "../images/company-logos/tydralabs.png";
 import GitHubIcon from "../images/socialmedia-icons/github-mark-white.svg";
 import LinkedInIcon from "../images/socialmedia-icons/linkedin_icon.png";
-import EmailIcon from "../images/socialmedia-icons/email.png"; 
 
 
 export default function Home({allPostsData}) {
@@ -159,25 +159,7 @@ export default function Home({allPostsData}) {
         </section>
       </main>
 
-      <footer className={styles.footer} id="contact">
-      <div>
-            <h2>Get in Touch!</h2>
-            <div>
-              <a href='https://github.com/edansteen' target='_blank' className={animatedStyles.gradientText}>
-                <Image src={GitHubIcon} height={24} width={24} />
-                GitHub
-              </a>
-              <a href='https://ca.linkedin.com/in/edan-steen-9b675b2aa' target='_blank' className={animatedStyles.gradientText}>
-                <Image src={LinkedInIcon} height={24} width={24}/>
-                LinkedIn
-              </a>
-              <a href='mailto:edansteen@outlook.com' className={animatedStyles.gradientText}>
-                <Image src={EmailIcon} height={24} width={24}/>
-                Email
-              </a>
-            </div>
-        </div>
-    </footer>
+      <Footer />
     </>
   );
 }
