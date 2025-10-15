@@ -4,9 +4,9 @@ import styles from '../styles/Footer.module.css';
 import Image from 'next/image';
 
 //Social Media Icons
-import GitHubIcon from "../images/socialmedia-icons/github-mark.svg";
+import GitHubIcon from "../images/socialmedia-icons/github-mark-white.svg";
 import LinkedInIcon from "../images/socialmedia-icons/linkedin_icon.png";
-import EmailIcon from "../images/socialmedia-icons/email.svg";
+import EmailIcon from "../images/socialmedia-icons/email.png"; 
 
 
 function Footer() {
@@ -18,7 +18,7 @@ function Footer() {
             <h2>Get in Touch!</h2>
             <div>
               <a>
-                <Image src={GitHubIcon} height={24} width={24}/>
+                <Image src={GitHubIcon} height={24} width={24} />
                 GitHub
               </a>
               <a>

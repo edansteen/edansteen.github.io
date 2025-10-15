@@ -183,6 +183,7 @@
   object-fit: cover;
   vertical-align: center;
   justify-content: center;
+  border-radius: 20px;
 }
 
 .infoIMG>span {

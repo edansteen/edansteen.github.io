@@ -34,6 +34,7 @@
 
 .footer > div > div > a > img {
     color: var(--reg_text);
+    border-radius: 5px;
 }
 
 .footer > div > div > a:hover {
