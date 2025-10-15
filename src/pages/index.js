@@ -81,8 +81,8 @@ export default function Home({allPostsData}) {
               companylogo={biot}
               companyurl="https://ubcbiot.com"
               dates="Aug 2025 - Present"
-              point1="Managing a team of 30 people, ensuring all sub-teams have the resources they need and are on track to complete objectives as well as compete in competitions."
-              point2="Organized process for recruitment of 10 new members, reaching over 6,000 people and raising overall awareness of the team."
+              point1="Managing a team of 32 people, ensuring all sub-teams have the resources they need and are on track to complete objectives as well as compete in competitions."
+              point2="Organized process for recruitment of 16 new members, reaching over 6,000 people and raising overall awareness of the team."
               point3="Tracking and documenting each sub-team's progress using Microsoft Excel and Google Suite."
             />
 
@@ -93,7 +93,7 @@ export default function Home({allPostsData}) {
               companyurl="https://ubcbiot.com"
               dates="Jan 2025 - Present"
               point1="Leading a team of 7 people in the development of sensor-based IoT devices for monitoring and automating brewing processes."
-              point2="Organized and currently managing $5,000 IoT fermenter project featuring I2C pH, DO2, temperature, and pressure sensors, PCB with Altium Designer, wireless data transmission with MQTT, and server-side Python scripting."
+              point2="Organized and currently managing $6,000 IoT fermenter project featuring I2C pH, DO2, temperature, and pressure sensors, PCB made with Altium Designer, wireless data transmission with MQTT, and server-side Python scripting."
               point3="Programmed ESP32 microcontrollers in C++ using ESP-IDF to collect data from pH, temperature, and dissolved oxygen sensors, and to wirelessly transmit the data over WiFi via MQTT to an external PC for data collection."
             />
 
