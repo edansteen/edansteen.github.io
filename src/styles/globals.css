@@ -27,6 +27,7 @@ body {
 body, main {
   width: 100vw;
   position: relative;
+  overflow-y: scroll;
   overflow-x: hidden;
 }
 
@@ -45,5 +46,7 @@ img {
 
 
 @media only screen and (max-width: 600px) {
-
+  html {
+    overflow-x: hidden;
+  }
 }
