@@ -15,7 +15,7 @@ import Footer from '../components/Footer';
 import { getSortedPostsData } from '../utils/posts.js';
 
 // Images
-import portrait from "../images/me.jpeg";
+import portrait from "../images/me.png";
 import ExperienceCard from '@/components/ExperienceCard';
 import biot from "../images/company-logos/biotlogo.png";
 import agroponics from "../images/company-logos/agroponics.png";
@@ -42,9 +42,6 @@ export default function Home({allPostsData}) {
             <span className={styles.landingTitle}>Project Portfolio</span>
             <div>
               <h1>Edan Steen</h1>
-              <a onClick={() => router.push('/#about')}>
-                <button className={animatedStyles.glowOnHover}>Take a look</button>
-              </a>
             </div>
           </div>
         </section>
