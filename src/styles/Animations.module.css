@@ -1,6 +1,6 @@
 /* https://codepen.io/jchaffin/pen/KvvqKE */
 
-@keyframes animationgradienttitle {
+@keyframes animationgradient {
   0% {
       background-position: 0 1600px;
   }
@@ -17,7 +17,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation-duration: 3s;
-  animation-name: animationgradienttitle;
+  animation-name: animationgradient;
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
 }

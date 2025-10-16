@@ -1,0 +1,46 @@
+@keyframes animationgradienttitle {
+  0% {
+      background-position: 0 1600px;
+  }
+  100% {
+      background-position: 1600px 0;
+  }
+}
+
+.gradientText {
+  color: #783ce7;
+  background: -webkit-linear-gradient(left, #d74ee6,#10DDC2 , #d74ee6);
+  background-size: 1600px 200px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-duration: 3s;
+  animation-name: animationgradienttitle;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+.error {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    vertical-align: center;
+}
+
+.error > button {
+    text-decoration: none;
+    color: var(--reg_text);;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: medium;
+    transition: 0.2s ease-in;
+}
+
+.error > button:hover {
+    color: var(--accent);
+    transform: scale(1.1);
+
+}
