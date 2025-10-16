@@ -15,7 +15,7 @@ import Footer from '../components/Footer';
 import { getSortedPostsData } from '../utils/posts.js';
 
 // Images
-import portrait from "../images/me.png";
+import portrait from "../images/me.jpg";
 import ExperienceCard from '@/components/ExperienceCard';
 import biot from "../images/company-logos/biotlogo.png";
 import agroponics from "../images/company-logos/agroponics.png";
