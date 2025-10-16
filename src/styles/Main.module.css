@@ -289,7 +289,7 @@
   align-items: center;
 }
 
-.suggestedArticle a :hover {
+.suggestedArticle a:hover {
   cursor: pointer;
   transform: scale(1.05);
   transition: 0.1s ease-in;
@@ -431,13 +431,4 @@
       border-radius: 20px;
   }
 
-  /* FOOTER */
-  .footer {
-    width: 100vw;
-    gap: 10vh;
-  }
-
-  .footer > div > div {
-    flex-direction: column;
-  }
 }
