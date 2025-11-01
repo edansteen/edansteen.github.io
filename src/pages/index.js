@@ -128,7 +128,7 @@ export default function Home({allPostsData}) {
                 (topic === "embedded") ?
                 <li className={styles.suggestedArticle} key={id}>
                     <Link href={`/projects/${id}`} className={animatedStyles.gradientText}>
-                        <img src={`/projectIMGs/${cover_image}`}/>
+                        <Image height={128} width={128} src={`/projectIMGs/${cover_image}`}/>
                         <br/>
                         {title}
                     </Link>
@@ -144,7 +144,7 @@ export default function Home({allPostsData}) {
                 (topic === "software") ?
                 <li className={styles.suggestedArticle} key={id}>
                     <Link href={`/projects/${id}`}  className={animatedStyles.gradientText}>
-                        <img src={`/projectIMGs/${cover_image}`}/>
+                        <Image height={128} width={128} src={`/projectIMGs/${cover_image}`}/>
                         <br/>
                         {title}
                     </Link>
