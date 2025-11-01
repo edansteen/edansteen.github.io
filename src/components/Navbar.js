@@ -40,11 +40,11 @@ function Navbar(props) {
           <span className={animatedStyles.gradientText}>Edan Steen - Portfolio</span>
         </a>
         <div className={menuActive ? (styles.mobileMenu) : styles.linksContainer} onClick={menuActive ? (closeLinks) : null}>
-            <span onClick={() => router.push('/#experience')} className={animatedStyles.gradientText}>
-              Experience
-            </span>
             <span onClick={() => router.push('/#about')} className={animatedStyles.gradientText}>
               About
+            </span>
+            <span onClick={() => router.push('/#experience')} className={animatedStyles.gradientText}>
+              Experience
             </span>
             <span onClick={() => router.push('/#projects')} className={animatedStyles.gradientText}>
               Projects
