@@ -26,7 +26,7 @@ function Footer() {
                 <Image src={LinkedInIcon} height={24} width={24}/>
                 LinkedIn
               </a>
-              <a href='mailto:edansteen@outlook.com' className={animatedStyles.gradientText}>
+              <a href='mailto:me@edansteen.com' className={animatedStyles.gradientText}>
                 <Image src={EmailIcon} height={24} width={24}/>
                 Email
               </a>
