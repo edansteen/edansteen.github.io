@@ -9,7 +9,7 @@ header: "UBC BIoT IoT Fermenter"
 ---
 The IoT Fermenter is a project I planned, organized, and lead at UBC Biological Internet of Things.
 
-The plan is to retrofit a fermenter with various sensors to allow us to collect data on our fermentations for analysis and training machine learning models in the future, as well as monitor conditions to prevent failures or contamination before they cause damage.
+We are retofitting a fermenter with various sensors to allow us to collect data on our fermentations for analysis and training machine learning models in the future, as well as monitor conditions to prevent failures or contamination before they cause damage.
 
 Some features include:
 - pH, temperature, DO, and pressure sensors
