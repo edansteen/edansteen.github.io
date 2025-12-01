@@ -106,7 +106,7 @@ export default function Home({allPostsData}) {
             />
 
             <ExperienceCard
-              title="Volunteer Instrumentation Engineer"
+              title="Instrumentation Engineering Volunteer"
               company="Tydra Laboratories"
               companylogo={tydralabs}
               companyurl="https://tydralabs.com"
