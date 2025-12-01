@@ -20,4 +20,4 @@ Some features include:
 - Web application to plot, save, and analyze data
 - Discord bot to send alerts to team members
 
-The GitHub link may currently be set to private, which is why you many not be able to view it. If you want more details feel free to reach out by email until it becomes public by the end of the year!
+The GitHub link is currently set to private, which is why you may not be able to view it. If you want more details feel free to reach out by email until it becomes public by the end of the year!
