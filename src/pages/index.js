@@ -79,7 +79,7 @@ export default function Home({allPostsData}) {
               companyurl="https://ubcbiot.com"
               dates="Aug 2025 - Present"
               point1="Managing a team of 32 people, coordinating meetings whilst ensuring all sub-teams have sufficient finances, resources and support needed to meet project goals and competition deadlines."
-              point2="Organized recruitment of 16 new members, reaching over 6,000 people and significantly increasing team visibility."
+              point2="Organized recruitment of 16 new members, reaching over 6,000 people and significantly increasing team visibility through presentations, booths, and social media efforts."
               point3="Monitored budget and team progress with Microsoft Excel and Google Suite to maintain clear documentation and efficiency."
             />
 
