@@ -78,9 +78,9 @@ export default function Home({allPostsData}) {
               companylogo={biot}
               companyurl="https://ubcbiot.com"
               dates="Aug 2025 - Present"
-              point1="Managing a team of 32 people, ensuring all sub-teams have the resources they need and are on track to complete objectives as well as compete in competitions."
-              point2="Organized process for recruitment of 16 new members, reaching over 6,000 people and raising overall awareness of the team."
-              point3="Tracking and documenting each sub-team's progress using Microsoft Excel and Google Suite."
+              point1="Managing a team of 32 people, coordinating meetings whilst ensuring all sub-teams have sufficient finances, resources and support needed to meet project goals and competition deadlines."
+              point2="Organized recruitment of 16 new members, reaching over 6,000 people and significantly increasing team visibility."
+              point3="Monitored budget and team progress with Microsoft Excel and Google Suite to maintain clear documentation and efficiency."
             />
 
             <ExperienceCard
@@ -90,7 +90,7 @@ export default function Home({allPostsData}) {
               companyurl="https://ubcbiot.com"
               dates="Jan 2025 - Present"
               point1="Leading a team of 7 people in the development of sensor-based IoT devices for monitoring and automating brewing processes."
-              point2="Organized and currently managing $6,000 IoT fermenter project featuring I2C pH, DO2, temperature, and pressure sensors, PCB made with Altium Designer, wireless data transmission with MQTT, and server-side Python scripting."
+              point2="Organized and currently managing $5,000 IoT fermenter project featuring I2C pH, DO2, temperature, and pressure sensors, ESP32 MCUs, PCB with Altium Designer, MQTT protocol for IoT, Python scripting, and a Linux server."
               point3="Programmed ESP32 microcontrollers in C++ using ESP-IDF to collect data from pH, temperature, and dissolved oxygen sensors, and to wirelessly transmit the data over WiFi via MQTT to an external PC for data collection."
             />
 
@@ -100,9 +100,9 @@ export default function Home({allPostsData}) {
               companylogo={agroponics}
               companyurl="https://ubcagroponics.com"
               dates="Sep 2023 - Present"
-              point1="Designed and built the team’s website (https://ubcagroponics.com) from scratch using the Next.js JavaScript framework, substantially boosting the team’s visibility and brand image."
-              point2="Collaborated with other members to ensure the site met the team’s needs and incorporated desired features."
-              point3="Programmed ESP32 microcontrollers using PlatformIO IDE to collect data from various sensors for monitoring plants in a hydroponic farm."
+              point1="Programmed ESP32 microcontrollers using PlatformIO IDE to collect data from pH, temperature, turbidity, electrical conductivity, water flow, and other sensors for monitoring plants in a hydroponic farm."
+              point2="Compiled budget using Microsoft Excel to optimize financial funding for sensor purchases."
+              point3="Designed and built the team’s website (https://ubcagroponics.com) from scratch using the Next.js JavaScript framework, substantially boosting the team’s visibility and brand image."
             />
 
             <ExperienceCard
