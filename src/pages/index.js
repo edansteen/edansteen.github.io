@@ -123,7 +123,7 @@ export default function Home({allPostsData}) {
 
           <div className={styles.projectGroup}>
             <h2>Electronics & Firmware</h2>
-            <ul className={styles.subteamArticles}>
+            <ul className={styles.projectArticles}>
                 {allPostsData.map(({ id, cover_image, title, topic }) => (
                 (topic === "embedded") ?
                 <li className={styles.suggestedArticle} key={id}>
@@ -139,7 +139,7 @@ export default function Home({allPostsData}) {
 
           <div className={styles.projectGroup}>
             <h2>Software</h2>
-            <ul className={styles.subteamArticles}>
+            <ul className={styles.projectArticles}>
                 {allPostsData.map(({ id, cover_image, title, topic }) => (
                 (topic === "software") ?
                 <li className={styles.suggestedArticle} key={id}>

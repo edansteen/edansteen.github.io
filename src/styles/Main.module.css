@@ -246,34 +246,18 @@
   margin-bottom: 5vh;
 }
 
-.subteams {
-  width: 100%;
-  margin-bottom: 100px;
-  background-color: whitesmoke;
-}
-
-.subteams > div {
-  display: flex;
-  flex-direction: column;
-  margin: 2% auto;
-}
-
-.subteams>div>h2{
-  color: var(--accent);
-  text-align: center;
-}
-
 /* SUBTEAM CARDS */
-.subteamArticles {
+.projectArticles {
   display: flex;
   flex-direction: row;
   gap: 15vw;
   height: 30vh;
+  width: 80vw;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   padding: 0;
   margin: 0;
-  overflow-x: auto;
+  overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
 }
@@ -288,6 +272,23 @@
   text-align: center;
   justify-content: center;
   align-items: center;
+
+}
+
+::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+  border: 1px solid var(--background);
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 0;
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4;
+  background: #333;
 }
 
 .suggestedArticle a:hover {
@@ -399,15 +400,12 @@
     font-size: small;
   }
 
-  /* SUBTEAM CARDS */
-  .subteamArticles {
+  /* PROJECT CARDS */
+  .projectArticles {
       display: flex;
       flex-direction: row;
       gap: 15vw;
-      height: 25vh;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
+      height: 30vh;
       margin: 0;
   }
 
