@@ -275,21 +275,6 @@
 
 }
 
-:global(::-webkit-scrollbar) {
-  height: 4px;
-  width: 4px;
-  border: 1px solid var(--background);
-}
-
-:global(::-webkit-scrollbar-track) {
-  border-radius: 0;
-  background: var(--background);
-}
-
-:global(::-webkit-scrollbar-thumb) {
-  border-radius: 4px;
-  background: #333;
-}
 
 .suggestedArticle a:hover {
   cursor: pointer;
