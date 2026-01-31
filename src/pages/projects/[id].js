@@ -37,14 +37,16 @@ export default function Project({ postData, postContent, allPostsData }) {
         </div>
         <div className={styles.exampleIMG} style={{backgroundImage: `url(${`/projectIMGs/${postData.cover_image}`})`}}/>
         
-        <div className={styles.githubLink}>
-          <Image src={GitHubLogo} height={32} width={32} />
-          {postData.link === null ? null : 
-            <a href={postData.link} target='_blank' className={animatedStyles.gradientText}>
-              View on Github
-            </a>
-          }
-        </div>
+        {postData.link != null ? 
+          <div className={styles.githubLink}>
+            <Image src={GitHubLogo} height={32} width={32} />
+              <a href={postData.link} target='_blank' className={animatedStyles.gradientText}>
+                View on Github
+              </a>
+    
+          </div>
+          : null
+        }
 
         <div className={styles.otherArticles}> 
           <h2>Check out some other projects:</h2>

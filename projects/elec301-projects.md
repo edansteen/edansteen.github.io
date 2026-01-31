@@ -3,7 +3,7 @@ title: "LTSpice Filter Design"
 date: "12-2025"
 id: "elec301"
 cover_image: "elec301.png"
-topic: 'embedded'
+topic: 'software'
 link: "https://github.com/edansteen/school-projects/tree/main/ELEC%20301%20Projects"
 header: "Filter Design For ELEC 301 Electronic Circuits"
 ---
