@@ -22,6 +22,7 @@ function ExperienceCard(props) {
                     <li>{props.point1}</li>
                     {(props.point2 != null) ? <li>{props.point2}</li> : null}
                     {(props.point3 != null) ? <li>{props.point3}</li> : null}
+                    {(props.point4 != null) ? <li>{props.point4}</li> : null}
                 </ul>
             </div>
         </div>

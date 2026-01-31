@@ -78,9 +78,10 @@ export default function Home({allPostsData}) {
               companylogo={biot}
               companyurl="https://ubcbiot.com"
               dates="Aug 2025 - Present"
-              point1="Managing a team of 32 people, coordinating meetings whilst ensuring all sub-teams have sufficient finances, resources and support needed to meet project goals and competition deadlines."
-              point2="Organized recruitment of 16 new members, reaching over 6,000 people and significantly increasing team visibility through presentations, booths, and social media efforts."
-              point3="Monitored budget and team progress with Microsoft Excel and Google Suite to maintain clear documentation and efficiency."
+              point1="Managing and leading a team of 39 people, coordinating meetings whilst ensuring all sub-teams have sufficient finances, resources and support needed to meet project goals and competition deadlines."
+              point2="Reached >6,000 people through presentations, booths, and social media efforts, significantly increasing visibility."
+              point3="Prepared budgets and administrative technical documents with Microsoft Excel and Google Suite."
+              point4="Spearheaded ChemE Cube project to build a miniature chemical plant within a cubic foot for carbon capture for 2026 competition, positioning the team to receive more funding and national recognition."
             />
 
             <ExperienceCard
@@ -89,9 +90,10 @@ export default function Home({allPostsData}) {
               companylogo={biot}
               companyurl="https://ubcbiot.com"
               dates="Jan 2025 - Jan 2026"
-              point1="Leading a team of 7 people in the development of sensor-based IoT devices for monitoring and automating brewing processes."
-              point2="Organized and currently managing $5,000 IoT fermenter project featuring I2C pH, DO2, temperature, and pressure sensors, ESP32 MCUs, PCB with Altium Designer, MQTT protocol for IoT, Python scripting, and a Linux server."
-              point3="Programmed ESP32 microcontrollers in C++ using ESP-IDF to collect data from pH, temperature, and dissolved oxygen sensors, and to wirelessly transmit the data over WiFi via MQTT to an external PC for data collection."
+              point1="Led a team of 8 people in the development of IoT devices for monitoring and automating brewing processes."
+              point2="Organized and led a $5,000 IoT fermenter project featuring I2C pH, DO2, temperature, and pressure sensors, ESP32 MCUs, PCB with Altium Designer, MQTT protocol for IoT, Python scripting, and a Linux server."
+              point3="Used Microsoft Office Suite (Excel, PowerPoint, etc.) and GitHub for project planning and budgeting."
+              point4="Programmed ESP32 microcontrollers in C++ to collect data from pH, temperature, and dissolved oxygen sensors, and to wirelessly transmit the data over Wi-Fi via MQTT to an external Linux server for data collection."
             />
 
             <ExperienceCard
@@ -100,9 +102,9 @@ export default function Home({allPostsData}) {
               companylogo={agroponics}
               companyurl="https://ubcagroponics.com"
               dates="Sep 2023 - Jan 2026"
-              point1="Programmed ESP32 microcontrollers using PlatformIO IDE to collect data from pH, temperature, turbidity, electrical conductivity, water flow, and other sensors for monitoring plants in a hydroponic farm."
+              point1="Programmed ESP32 microcontrollers in C to collect data from pH, temperature, turbidity, electrical conductivity, water flow, and other sensors for monitoring plants in a hydroponic farm."
               point2="Compiled budget using Microsoft Excel to optimize financial funding for sensor purchases."
-              point3="Designed and built the team’s website (https://ubcagroponics.com) from scratch using the Next.js JavaScript framework, substantially boosting the team’s visibility and brand image."
+              point3="Designed and built the team’s website (https://ubcagroponics.com) from scratch using the Next.js JavaScript framework, communicating with other members to ensure the site met the team's needs."
             />
 
             <ExperienceCard
@@ -111,7 +113,7 @@ export default function Home({allPostsData}) {
               companylogo={tydralabs}
               companyurl="https://tydralabs.com"
               dates="May 2025 - Aug 2025"
-              point1="Designed electrical system and computer architecture for a 60L yeast bioreactor, which includes I2C sensors, peristaltic pumps using stepper motors, and a mini PC running a custom Python script."
+              point1="Designed schematic and computer architecture for a 60L yeast bioreactor, which includes I2C sensors, peristaltic pumps using stepper motors, and a mini PC running a custom Python script."
               point2="Programmed Arduino R4 to collect data from temperature, pH, and dissolved oxygen I2C sensors."
               point3="Designed and implemented automated pH regulation system using peristaltic pumps and stepper motor drivers."
             />
