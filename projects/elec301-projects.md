@@ -1,7 +1,7 @@
 ---
 title: "LTSpice Filter Design"
 date: "12-2025"
-id: "elec301"
+id: "elec301-projects"
 cover_image: "elec301.png"
 topic: 'software'
 link: "https://github.com/edansteen/school-projects/tree/main/ELEC%20301%20Projects"
