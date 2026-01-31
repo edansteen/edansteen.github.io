@@ -26,6 +26,10 @@ body {
   background-color: var(--background);
   color: var(--reg_text);
   font-family: var(--primary-font);
+
+  scrollbar-width: thin;
+  scrollbar-color: #333 var(--background);
+  scrollbar-gutter: stable;
 }
 
 body, main {
