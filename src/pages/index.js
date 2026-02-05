@@ -50,7 +50,7 @@ export default function Home({allPostsData}) {
           <div className={styles.infoText}>
             <h1>ABOUT ME</h1>
             <p>
-              Hi! My name is Edan, and I am currently studying Electrical Engineering at the University of British Columbia (UBC). This portfolio showcases my experience and some the projects I've worked on over the years. Feel free to reach out through the links below!
+              Hi! My name is Edan, and I am currently studying electrical engineering at the University of British Columbia (UBC). This portfolio showcases my experience and some the projects I've worked on over the years. Feel free to reach out through the links below!
             </p>
             <div>
               <a href='https://github.com/edansteen' target='_blank' className={animatedStyles.gradientText}>
@@ -81,7 +81,7 @@ export default function Home({allPostsData}) {
               point1="Managing and leading a team of 39 people, coordinating meetings whilst ensuring all sub-teams have sufficient finances, resources and support needed to meet project goals and competition deadlines."
               point2="Reached >6,000 people through presentations, booths, and social media efforts, significantly increasing visibility."
               point3="Prepared budgets and administrative technical documents with Microsoft Excel and Google Suite."
-              point4="Spearheaded ChemE Cube project to build a miniature chemical plant within a cubic foot for carbon capture for 2026 competition, positioning the team to receive more funding and national recognition."
+              point4="Spearheaded ChemE Cube project to build a miniature direct air capture plant within a cubic foot for 2026 competition, positioning the team to receive national recognition and industry networking opportunities."
             />
 
             <ExperienceCard
@@ -113,8 +113,8 @@ export default function Home({allPostsData}) {
               companylogo={tydralabs}
               companyurl="https://tydralabs.com"
               dates="May 2025 - Aug 2025"
-              point1="Designed schematic and computer architecture for a 60L yeast bioreactor, which includes I2C sensors, peristaltic pumps using stepper motors, and a mini PC running a custom Python script."
-              point2="Programmed Arduino R4 to collect data from temperature, pH, and dissolved oxygen I2C sensors."
+              point1="Worked with a team of 6 to build a 60L yeast bioreactor for chitin production."
+              point2="Designed schematic and computer architecture for a 60L yeast bioreactor, which includes I2C sensors, peristaltic pumps using stepper motors, and a mini PC running a custom Python script."
               point3="Designed and implemented automated pH regulation system using peristaltic pumps and stepper motor drivers."
             />
           </div>
