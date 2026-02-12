@@ -1,5 +1,5 @@
 ---
-title: "Coin Picking Robot"
+title: "Coin-Picking Robot"
 date: "02-2025 to 04-2025"
 id: "coinrobot"
 cover_image: "coinrobot.jpeg"

@@ -3,7 +3,7 @@ title: "IoT Fermenter"
 date: "09-2025 - Present"
 id: "iot-fermenter"
 cover_image: "iot-fermenter.jpg"
-topic: 'embedded'
+topic: 'current'
 link: "https://github.com/UBC-Brewing-Internet-of-Things/IoT_Fermenter"
 header: "UBC BIoT IoT Fermenter"
 ---

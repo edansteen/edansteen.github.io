@@ -1,5 +1,5 @@
 ---
-title: "Drink Dispensing WALL-E"
+title: "RC WALL-E"
 date: "11-2025 - 01-2026"
 id: "walle"
 cover_image: "walle.jpg"

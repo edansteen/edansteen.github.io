@@ -154,6 +154,22 @@ export default function Home({allPostsData}) {
                 ))}
             </ul>                        
           </div>
+
+          <div className={styles.projectGroup}>
+            <h2>Current Projects (In Progress)</h2>
+            <ul className={styles.projectArticles}>
+                {allPostsData.map(({ id, cover_image, title, topic }) => (
+                (topic === "current") ?
+                <li className={styles.suggestedArticle} key={id}>
+                    <Link href={`/projects/${id}`} className={animatedStyles.gradientText}>
+                        <Image height={128} width={128} src={`/projectIMGs/${cover_image}`}/>
+                        <br/>
+                        {title}
+                    </Link>
+                </li> : null
+                ))}
+            </ul>                        
+          </div>
         </section>
       </main>
 
