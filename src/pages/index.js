@@ -79,9 +79,9 @@ export default function Home({allPostsData}) {
               companyurl="https://ubcbiot.com"
               dates="Aug 2025 - Present"
               point1="Managing and leading a team of 39 people, coordinating meetings whilst ensuring all sub-teams have sufficient finances, resources and support needed to meet project goals and competition deadlines."
-              point2="Reached >6,000 people through presentations, booths, and social media efforts, significantly increasing visibility."
+              point2="Reached 6,000+ people through presentations, booths, and social media efforts, significantly increasing visibility."
               point3="Prepared budgets and administrative technical documents with Microsoft Excel and Google Suite."
-              point4="Spearheaded ChemE Cube project to build a miniature direct air capture plant within a cubic foot for 2026 competition, positioning the team to receive national recognition and industry networking opportunities."
+              point4="Spearheaded ChemE Cube project to build a miniature direct air capture plant within a cubic foot for 2026 competition, positioning the team to receive international recognition and industry networking opportunities."
             />
 
             <ExperienceCard
