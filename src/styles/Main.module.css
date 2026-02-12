@@ -221,7 +221,7 @@
 }
 
 .experiencecard > a > img:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   cursor: pointer;
   box-shadow: 2px 2px 2px #783ce7, -2px -2px 2px #d74ee6;
 }
@@ -278,7 +278,7 @@
 
 .suggestedArticle a:hover {
   cursor: pointer;
-  transform: scale(1.05);
+  transform: scale(1.02);
   transition: 0.1s ease-in;
 }
 
