@@ -102,7 +102,7 @@ export default function Home({allPostsData}) {
               companylogo={agroponics}
               companyurl="https://ubcagroponics.com"
               dates="Sep 2023 - Jan 2026"
-              point1="Programmed ESP32 microcontrollers in C to collect data from pH, temperature, turbidity, electrical conductivity, water flow, and other sensors for monitoring plants in a hydroponic farm."
+              point1="Programmed ESP32 microcontrollers in C to collect data from pH, temperature, turbidity, electrical conductivity, water flow, and other I2C, SPI, and UART based sensors for monitoring plants in a hydroponic farm."
               point2="Compiled budget using Microsoft Excel to optimize financial funding for sensor purchases."
               point3="Designed and built the team’s website (https://ubcagroponics.com) from scratch using the Next.js JavaScript framework, communicating with other members to ensure the site met the team's needs."
             />
