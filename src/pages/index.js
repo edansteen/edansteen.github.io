@@ -17,6 +17,7 @@ import { getSortedPostsData } from '../utils/posts.js';
 // Images
 import portrait from "../images/me.jpg";
 import ExperienceCard from '@/components/ExperienceCard';
+import houle from "../images/company-logos/houle.png";
 import biot from "../images/company-logos/biotlogo.png";
 import agroponics from "../images/company-logos/agroponics.png";
 import tydralabs from "../images/company-logos/tydralabs.png";
@@ -73,15 +74,26 @@ export default function Home({allPostsData}) {
 
           <div> 
             <ExperienceCard
+              title="Co-op Project Assistant"
+              company="Houle Electric Ltd."
+              companylogo={houle}
+              companyurl="https://www.houle.ca/"
+              dates="May 2026 - Present"
+              point1="Document control, paper flow, tracking, and job organization."
+              point2="Prepare with daily Time and Material (T&M) work sheets."
+              point3="Assist with site safety (record keeping and document preparation)."
+            />
+
+            <ExperienceCard
               title="Captain"
               company="UBC Biological Internet of Things"
               companylogo={biot}
               companyurl="https://ubcbiot.com"
               dates="Aug 2025 - Present"
               point1="Managing and leading a team of 39 people, coordinating meetings whilst ensuring all sub-teams have sufficient finances, resources and support needed to meet project goals and competition deadlines."
-              point2="Reached 6,000+ people through presentations, booths, and social media efforts, significantly increasing visibility."
-              point3="Prepared budgets and administrative technical documents with Microsoft Excel and Google Suite."
-              point4="Spearheaded ChemE Cube project to build a miniature direct air capture plant within a cubic foot for 2026 competition, positioning the team to receive international recognition and industry networking opportunities."
+              point2="Founded the ChemE Cube team to build a miniature direct air capture plant within a cubic foot for 2026 competition, positioning the team to receive international recognition and industry networking opportunities."
+              point3="Reached 6,000+ people through presentations, booths, and social media efforts, significantly increasing visibility."
+              point4="Prepared budgets and administrative technical documents with Microsoft Excel and Google Suite."
             />
 
             <ExperienceCard
