@@ -79,9 +79,8 @@ export default function Home({allPostsData}) {
               companylogo={houle}
               companyurl="https://www.houle.ca/"
               dates="May 2026 - Present"
-              point1="Document control, paper flow, tracking, and job organization."
-              point2="Prepare with daily Time and Material (T&M) work sheets."
-              point3="Assist with site safety (record keeping and document preparation)."
+              point1="Working on the New Surrey Hospital and BC Cancer Center project to assist with document control, paper flow, tracking, and job organization."
+              point2="Assist with site safety (record keeping & document preparation) and prepare daily Time and Material (T&M) work sheets."
             />
 
             <ExperienceCard
