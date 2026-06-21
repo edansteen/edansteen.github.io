@@ -125,7 +125,7 @@ export default function Home({allPostsData}) {
               companyurl="https://tydralabs.com"
               dates="May 2025 - Aug 2025"
               point1="Worked with a team of 6 to build a 60L yeast bioreactor for chitin production."
-              point2="Designed schematic and computer architecture for a 60L yeast bioreactor, which includes I2C sensors, peristaltic pumps using stepper motors, and a mini PC running a custom Python script."
+              point2="Designed schematic and computer architecture, which includes I2C sensors, peristaltic pumps using stepper motors, and a mini PC running a custom Python script."
               point3="Designed and implemented automated pH regulation system using peristaltic pumps and stepper motor drivers."
             />
           </div>
