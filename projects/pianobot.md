@@ -1,6 +1,6 @@
 ---
 title: "Piano-Playing Robot"
-date: "01-2026 - Present"
+date: "01-2026 - 04-2026"
 id: "pianobot"
 cover_image: "pianobot.jpg"
 topic: 'embedded'

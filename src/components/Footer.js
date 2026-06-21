@@ -32,7 +32,7 @@ function Footer() {
               </a>
             </div>
         </div>
-        <span>Last updated: June 17, 2026</span>
+        <span>Last updated: June 21, 2026</span>
     </footer>
   );
 }
