@@ -74,13 +74,15 @@ export default function Home({allPostsData}) {
 
           <div> 
             <ExperienceCard
-              title="Co-op Project Assistant"
+              title="Project Assistant Co-op"
               company="Houle Electric Ltd."
               companylogo={houle}
               companyurl="https://www.houle.ca/"
               dates="May 2026 - Present"
-              point1="Working on the New Surrey Hospital and BC Cancer Center project to assist with document control, paper flow, tracking, and job organization."
-              point2="Assist with site safety (record keeping & document preparation) and prepare daily Time and Material (T&M) work sheets."
+              point1="Supported logistical and administrative operations for the New Surrey Hospital and BC Cancer Centre electrical construction project, contributing to efficient coordination across field and office teams."
+              point2="Directly assisted project management, QA/QC, and onsite safety through document control, data entry, and coordination using tools such as Microsoft Office Suite, Procore, Stratus, and Touchplan."
+              point3="Authored and standardized SOPs and process documentation improved onboarding efficiency and streamlined key administrative and logistical workflows."
+              point4="Built a conduit sizing tool in MS Excel for calculating conduit type for transformer installations, reducing calculation time and improving consistency across design."
             />
 
             <ExperienceCard
