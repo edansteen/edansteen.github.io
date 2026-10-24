@@ -26,7 +26,7 @@
 .landing {
   font-family: Comfortaa;
   background-position: center;
-  height: 90vh;
+  height: 80vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -40,7 +40,6 @@
 
 .landing>div {
   background-color: rgb(0,0,0,0.1);
-  padding-top: 99px;
   height: 100%;
   width: 100%;
   display: flex;
