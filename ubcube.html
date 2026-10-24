@@ -189,7 +189,7 @@
 
         <div class="chart-card">
             <div class="chart-title">
-                Power vs Time
+                Power (W) vs Time (s)
             </div>
             <canvas id="powerChart"></canvas>
         </div>
@@ -246,6 +246,11 @@ const powerChart = new Chart( document.getElementById("powerChart"), {
             y: {
                 min: 0,
                 max: 12
+            }
+        },
+        plugins:{
+            legend:{
+                display:false
             }
         }
     }
