@@ -9,7 +9,6 @@
     <link rel="icon" href="images/logo.ico" type="image/x-icon">    
     <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 <style>
     * {
         margin:0;
@@ -160,8 +159,8 @@
 
             <div class="card">
                 <div class="card-title">Elapsed Time</div>
-                <div id="elapsedValue" class="card-value">
-                    <span id="elapsedValue">0</span> ms
+                <div class="card-value">
+                    <span id="elapsedValue">0</span> s
                 </div>
             </div>
 
@@ -203,11 +202,12 @@
 
 /* MQTT Variables */
 const MQTT_BROKER_URL = 'wss://broker.emqx.io:8084/mqtt'; 
-const MQTT_TOPIC = 'X$DnH#s/8*!Nf/ubcube';
+const MQTT_TOPIC = 'X$DnH@s/8*!Nf/ubcube';
 
 /* Dashboard constants */
 const SUPPLY_VOLTAGE = 12.0;
 const MAX_X_AXIS_POINTS = 300;
+const MIN_X_AXIS_POINTS = 300;
 
 let lastElapsedMs = null;
 let lastUpdateTimestamp = 0;
@@ -221,6 +221,7 @@ const dutyValue = document.getElementById("dutyValue");
 const elapsedValue = document.getElementById("elapsedValue");
 
 /* Chart */
+
 const powerChart = new Chart( document.getElementById("powerChart"), {
     type:"line",
     data:{
@@ -231,12 +232,22 @@ const powerChart = new Chart( document.getElementById("powerChart"), {
             borderColor:"#03ac13",
             borderWidth:2,
             pointRadius:0,
-            tension:0.2
+            tension:0.1
         }]
     },
     options:{
         responsive:true,
-        animation:false
+        animation: false,
+        scales: {
+            x: {
+                min: 0, 
+                max: 300
+            },
+            y: {
+                min: 0,
+                max: 12
+            }
+        }
     }
 });
 
@@ -257,7 +268,7 @@ function addPoint(chart,label,value) {
     chart.data.labels.push(label);
     chart.data.datasets[0].data.push(value);
 
-    if(chart.data.labels.length > MAX_POINTS) {
+    if(chart.data.labels.length > MAX_X_AXIS_POINTS) {
         chart.data.labels.shift();
         chart.data.datasets[0].data.shift();
     }
@@ -275,7 +286,7 @@ function processMessage(data) {
     currentValue.textContent = current.toFixed(2);
     powerValue.textContent = power.toFixed(2);
     dutyValue.textContent = (duty / 255 * 100).toFixed(0);
-    elapsedValue.textContent = elapsed;
+    elapsedValue.textContent = (elapsed / 1000.0).toFixed(0);
 
     if(lastElapsedMs === null || elapsed > lastElapsedMs) {
         lastUpdateTimestamp = Date.now();
