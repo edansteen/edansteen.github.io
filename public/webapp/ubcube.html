@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UBCube | Dashboard</title>
+
+    <link rel="icon" href="logo.ico" type="image/x-icon">    
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+    * {
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+
+    nav {
+        color: #222;
+        height: 40px;
+        width: 100vw;
+        padding: 20px;
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navlogo {
+        width: 40px;
+        height: 40px;
+    }
+
+    body {
+        font-family: sans-serif;
+        background:whitesmoke;
+        color:#222;
+    }
+    
+    main {
+        width: 80vw;
+        max-width: 1400px;
+        margin: auto;
+    }
+
+    .header h1 {
+        text-align:center;
+    }
+
+    .cards {
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+        gap:16px;
+        margin-bottom:20px;
+    }
+
+    .card {
+        background:white;
+        border-radius:12px;
+        padding:20px;
+        box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .card-title {
+        color:#444;
+        font-size:0.9rem;
+    }
+
+    .card-value {
+        font-size:2rem;
+        font-weight:700;
+        margin-top:8px;
+    }
+
+    .status {
+        display:inline-block;
+        padding:8px 18px;
+        border-radius:25px;
+        color:white;
+        font-weight:600;
+    }
+
+    .online {
+        background: #03ac13;
+    }
+
+    .offline {
+        background:#d21404;
+    }
+
+    .connected {
+        background:#0059cf;
+    }
+
+    .disconnected {
+        background:#6b7280;
+    }
+
+    .chart-card {
+        background:white;
+        border-radius:12px;
+        box-shadow:0 2px 8px rgba(0,0,0,.1);
+        padding: 15px;
+    }
+
+    .chart-title {
+        margin-bottom:15px;
+        font-size:1.1rem;
+        font-weight:600;
+    }
+
+    canvas {
+        max-height:350px;
+    }
+
+    footer {
+        margin-top: 20px;
+        color: #6b7280;
+        font-size: x-small;
+        text-align: center;
+        bottom: 0;
+    }
+</style>
+</head>
+
+<body>
+    <nav>
+        <img class="navlogo" src="logo.ico"/> UBCube Dashboard
+    </nav>
+    <main>
+        <div class="cards">
+
+            <div class="card">
+                <div class="card-title">Cube Status</div>
+                <div id="cubeStatus" class="status offline">
+                    OFFLINE
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">MQTT Status</div>
+                <div id="mqttStatus" class="status disconnected">
+                    DISCONNECTED
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Elapsed Time</div>
+                <div id="elapsedValue" class="card-value">
+                    <span id="elapsedValue">0</span> ms
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Current</div>
+                <div class="card-value">
+                    <span id="currentValue">0.00</span> A
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Power</div>
+                <div class="card-value">
+                    <span id="powerValue">0.00</span> W
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Duty Cycle</div>
+                <div class="card-value">
+                    <span id="dutyValue">0</span> %
+                </div>
+            </div>
+
+        </div>
+
+        <div class="chart-card">
+            <div class="chart-title">
+                Power vs Time
+            </div>
+            <canvas id="powerChart"></canvas>
+        </div>
+    </main>
+    <footer>
+        UBC ChemE Cube 2026
+    </footer>
+
+<script>
+
+/* MQTT Variables */
+const MQTT_BROKER_URL = 'wss://broker.emqx.io:8084/mqtt'; 
+const MQTT_TOPIC = 'X$DnH#s/8*!Nf/ubcube';
+
+/* Dashboard constants */
+const SUPPLY_VOLTAGE = 12.0;
+const MAX_X_AXIS_POINTS = 300;
+
+let lastElapsedMs = null;
+let lastUpdateTimestamp = 0;
+
+/* UI References*/
+const cubeStatus = document.getElementById("cubeStatus");
+const mqttStatus = document.getElementById("mqttStatus");
+const currentValue = document.getElementById("currentValue");
+const powerValue = document.getElementById("powerValue");
+const dutyValue = document.getElementById("dutyValue");
+const elapsedValue = document.getElementById("elapsedValue");
+
+/* Chart */
+const powerChart = new Chart( document.getElementById("powerChart"), {
+    type:"line",
+    data:{
+        labels:[],
+        datasets:[{
+            label:"Power (W)",
+            data:[],
+            borderColor:"#03ac13",
+            borderWidth:2,
+            pointRadius:0,
+            tension:0.2
+        }]
+    },
+    options:{
+        responsive:true,
+        animation:false
+    }
+});
+
+/* Status logic */
+function setMotorOnline(isOnline) {
+    cubeStatus.textContent = isOnline ? "ONLINE" : "OFFLINE";
+    cubeStatus.className = `status ${isOnline ? "online" : "offline"}`;
+}
+
+setInterval(() => {
+    const online = Date.now() - lastUpdateTimestamp < 10000;
+
+    setMotorOnline(online);
+},1000);
+
+/* Add point to chart */
+function addPoint(chart,label,value) {
+    chart.data.labels.push(label);
+    chart.data.datasets[0].data.push(value);
+
+    if(chart.data.labels.length > MAX_POINTS) {
+        chart.data.labels.shift();
+        chart.data.datasets[0].data.shift();
+    }
+
+    chart.update();
+}
+
+/* Update data */
+function processMessage(data) {
+    const current = Number(data.current);
+    const elapsed = Number(data.elapsed_ms);
+    const duty = Number(data.duty_cycle);
+    const power = current * SUPPLY_VOLTAGE;
+
+    currentValue.textContent = current.toFixed(2);
+    powerValue.textContent = power.toFixed(2);
+    dutyValue.textContent = (duty / 255 * 100).toFixed(0);
+    elapsedValue.textContent = elapsed;
+
+    if(lastElapsedMs === null || elapsed > lastElapsedMs) {
+        lastUpdateTimestamp = Date.now();
+    }
+
+    lastElapsedMs = elapsed;
+
+    addPoint(powerChart, (elapsed / 1000).toFixed(2), power);
+}
+
+/* MQTT Functions and Handling */
+
+const client = mqtt.connect(MQTT_BROKER_URL);
+
+client.on("connect",() => {
+    mqttStatus.textContent = "CONNECTED";
+    mqttStatus.className = "status connected";
+    
+    client.subscribe(MQTT_TOPIC);
+    console.log("Subscribed:", MQTT_TOPIC);
+});
+
+client.on("reconnect",() => {
+    console.log("Reconnecting...");
+});
+
+client.on("close",() => {
+    mqttStatus.textContent = "DISCONNECTED";
+    mqttStatus.className = "status disconnected";
+});
+
+client.on("error",(err)=> {
+    console.error(err);
+});
+
+client.on("message", (topic,message)=> {
+    try {
+        const data = JSON.parse(message.toString());
+        processMessage(data);
+    }
+    catch(error) {
+        console.error("Invalid JSON", error);
+    }
+});
+
+</script>
+</body>
+
+</html>
