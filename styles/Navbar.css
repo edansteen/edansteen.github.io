@@ -6,7 +6,7 @@ nav, .active {
     align-items: center;
     flex-direction: row;
     justify-content: center;
-    position: fixed;
+    position: absolute;
     z-index: 3;
 }
 
@@ -18,7 +18,7 @@ nav {
 .active {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: rgb(24,24,24);
-    position: fixed;
+    position: absolute;
     transition: ease-in 0.1s;
 }
 
@@ -89,12 +89,13 @@ nav {
 /* FOR SMALL SCREEN */
 @media only screen and (max-width: 800px)  {  
     .active {
-        position: fixed;
+        position: absolute;
     }
     .nav, .active {
         width: 100vw;
         height: 10vh; 
         padding: 0;
+        display: none;
     }
 
     .navIcon {
@@ -123,7 +124,7 @@ nav {
     }
 
     .mobileMenu {
-        position: fixed;
+        position: absolute;
         visibility: visible;
         z-index: 0;
         right: 0px;
