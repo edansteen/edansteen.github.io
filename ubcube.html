@@ -184,7 +184,12 @@
                     <span id="dutyValue">0</span> %
                 </div>
             </div>
-
+            <div class="card">
+                <div class="card-title">Energy Cost</div>
+                <div class="card-value">
+                    $<span id="energyCostValue">0</span>
+                </div>
+            </div>
         </div>
 
         <div class="chart-card">
@@ -211,6 +216,7 @@ const MIN_X_AXIS_POINTS = 300;
 
 let lastElapsedMs = null;
 let lastUpdateTimestamp = 0;
+let totalEnergyUsed = 0.0; //in kWh
 
 /* UI References*/
 const cubeStatus = document.getElementById("cubeStatus");
@@ -219,6 +225,7 @@ const currentValue = document.getElementById("currentValue");
 const powerValue = document.getElementById("powerValue");
 const dutyValue = document.getElementById("dutyValue");
 const elapsedValue = document.getElementById("elapsedValue");
+const energyCostValue = document.getElementById("energyCostValue");
 
 /* Chart */
 
@@ -292,6 +299,8 @@ function processMessage(data) {
     powerValue.textContent = power.toFixed(2);
     dutyValue.textContent = (duty / 255 * 100).toFixed(0);
     elapsedValue.textContent = (elapsed / 1000.0).toFixed(0);
+    totalEnergyUsed += power * (elapsed - (lastElapsedMs || elapsed)) / 1000.0; // accumulate energy in watt-seconds
+    energyCostValue.textContent = (totalEnergyUsed / 3600000.0 * 0.12).toFixed(4); // assuming $0.12 per kWh
 
     if(lastElapsedMs === null || elapsed > lastElapsedMs) {
         lastUpdateTimestamp = Date.now();
