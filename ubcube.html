@@ -126,6 +126,34 @@
         max-height:350px;
     }
 
+    .learnMore {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 30px 0;
+    }
+
+    .download {
+        display: flex;
+        width: 100%;
+        justify-content: right;
+        margin: 10px;
+   }
+
+    .download > button {
+        text-decoration: none;
+        background-color: #0059cf;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+    } 
+
+    .download > button:hover {
+        cursor: pointer;
+        background-color: #6b7280;
+    }
+
     footer {
         margin-top: 20px;
         color: #6b7280;
@@ -185,9 +213,15 @@
                 </div>
             </div>
             <div class="card">
-                <div class="card-title">Energy Cost</div>
+                <div class="card-title">Energy Cost (CAD)</div>
                 <div class="card-value">
                     $<span id="energyCostValue">0</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">Time To Spend $0.01 CAD</div>
+                <div class="card-value">
+                    <span id="timeToSpendValue">0</span> hr
                 </div>
             </div>
         </div>
@@ -197,6 +231,14 @@
                 Power (W) vs Time (s)
             </div>
             <canvas id="powerChart"></canvas>
+        </div>
+
+        <div class="download">
+            <button id="downloadCSV">Download CSV</button>
+        </div>
+
+        <div class="learnMore">
+            <p>You can learn more about our team at <a href="https://ubcbiot.com" target="_blank">ubcbiot.com</a>!</p>
         </div>
     </main>
     <footer>
@@ -208,6 +250,7 @@
 /* MQTT Variables */
 const MQTT_BROKER_URL = 'wss://broker.emqx.io:8084/mqtt'; 
 const MQTT_TOPIC = 'X$DnH@s/8*!Nf/ubcube';
+const filename = "cubedata.csv";
 
 /* Dashboard constants */
 const SUPPLY_VOLTAGE = 12.0;
@@ -217,6 +260,9 @@ const MIN_X_AXIS_POINTS = 300;
 let lastElapsedMs = null;
 let lastUpdateTimestamp = 0;
 let totalEnergyUsed = 0.0; //in kWh
+let valuesArray = [
+    ["Current (A)", "Duty Cycle (%)", "Time elapsed (ms)"],
+]; //array to store our values to download csv
 
 /* UI References*/
 const cubeStatus = document.getElementById("cubeStatus");
@@ -226,6 +272,8 @@ const powerValue = document.getElementById("powerValue");
 const dutyValue = document.getElementById("dutyValue");
 const elapsedValue = document.getElementById("elapsedValue");
 const energyCostValue = document.getElementById("energyCostValue");
+const timeToSpendValue = document.getElementById("timeToSpendValue");
+const downloadCSVbutton = document.getElementById("downloadCSV");
 
 /* Chart */
 
@@ -299,8 +347,9 @@ function processMessage(data) {
     powerValue.textContent = power.toFixed(2);
     dutyValue.textContent = (duty / 255 * 100).toFixed(0);
     elapsedValue.textContent = (elapsed / 1000.0).toFixed(0);
-    totalEnergyUsed += power * (elapsed - (lastElapsedMs || elapsed)) / 1000.0; // accumulate energy in watt-seconds
-    energyCostValue.textContent = (totalEnergyUsed / 3600000.0 * 0.12).toFixed(4); // assuming $0.12 per kWh
+    totalEnergyUsed += power * (elapsed - (lastElapsedMs || elapsed)) / 1000.0; // total energy in watt-seconds
+    energyCostValue.textContent = (totalEnergyUsed / 3600000.0 * 0.12).toFixed(5); // assuming $0.12 per kWh
+    timeToSpendValue.textContent = (0.01 / (totalEnergyUsed * 0.12)).toFixed(2); // time to spend $0.01
 
     if(lastElapsedMs === null || elapsed > lastElapsedMs) {
         lastUpdateTimestamp = Date.now();
@@ -308,7 +357,9 @@ function processMessage(data) {
 
     lastElapsedMs = elapsed;
 
-    addPoint(powerChart, (elapsed / 1000).toFixed(2), power);
+    addPoint(powerChart, (elapsed / 1000).toFixed(2), power); //add point to chart
+
+    valuesArray.push([current, dutyValue, elapsed]);
 }
 
 /* MQTT Functions and Handling */
@@ -344,6 +395,32 @@ client.on("message", (topic,message)=> {
     catch(error) {
         console.error("Invalid JSON", error);
     }
+});
+
+/* Download CSV */
+addEventListener(downloadCSVbutton.onclick = () => {
+// 1. Convert the nested array into a CSV string
+  const csvContent = valuesArray
+    .map(row => row.map(val => `"${String(val).replace(/"/g, '""')}"`).join(","))
+    .join("\n");
+
+  // 2. Create a Blob object with the CSV string
+  const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+
+  // 3. Create a temporary anchor element and trigger download
+  const link = document.createElement("a");
+  const url = URL.createObjectURL(blob);
+  
+  link.setAttribute("href", url);
+  link.setAttribute("download", filename);
+  link.style.visibility = 'hidden';
+  
+  document.body.appendChild(link);
+  link.click();
+  
+  // 4. Clean up the DOM and memory
+  document.body.removeChild(link);
+  URL.revokeObjectURL(url);
 });
 
 </script>
