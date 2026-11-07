@@ -218,12 +218,6 @@
                     $<span id="energyCostValue">0</span>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-title">Time To Spend $0.01 CAD</div>
-                <div class="card-value">
-                    <span id="timeToSpendValue">0</span> hr
-                </div>
-            </div>
         </div>
 
         <div class="chart-card">
@@ -272,7 +266,6 @@ const powerValue = document.getElementById("powerValue");
 const dutyValue = document.getElementById("dutyValue");
 const elapsedValue = document.getElementById("elapsedValue");
 const energyCostValue = document.getElementById("energyCostValue");
-const timeToSpendValue = document.getElementById("timeToSpendValue");
 const downloadCSVbutton = document.getElementById("downloadCSV");
 
 /* Chart */
@@ -340,16 +333,15 @@ function addPoint(chart,label,value) {
 function processMessage(data) {
     const current = Number(data.current);
     const elapsed = Number(data.elapsed_ms);
-    const duty = Number(data.duty_cycle);
+    const duty = (Number(data.duty_cycle)/ 255 * 100).toFixed(0)
     const power = current * SUPPLY_VOLTAGE;
 
     currentValue.textContent = current.toFixed(2);
     powerValue.textContent = power.toFixed(2);
-    dutyValue.textContent = (duty / 255 * 100).toFixed(0);
+    dutyValue.textContent = duty;
     elapsedValue.textContent = (elapsed / 1000.0).toFixed(0);
     totalEnergyUsed += power * (elapsed - (lastElapsedMs || elapsed)) / 1000.0; // total energy in watt-seconds
     energyCostValue.textContent = (totalEnergyUsed / 3600000.0 * 0.12).toFixed(5); // assuming $0.12 per kWh
-    timeToSpendValue.textContent = (0.01 / (totalEnergyUsed * 0.12)).toFixed(2); // time to spend $0.01
 
     if(lastElapsedMs === null || elapsed > lastElapsedMs) {
         lastUpdateTimestamp = Date.now();
@@ -359,7 +351,7 @@ function processMessage(data) {
 
     addPoint(powerChart, (elapsed / 1000).toFixed(2), power); //add point to chart
 
-    valuesArray.push([current, dutyValue, elapsed]);
+    valuesArray.push([current, duty, elapsed]);
 }
 
 
