@@ -336,7 +336,7 @@ function addPoint(chart,label,value) {
     chart.update();
 }
 
-/* Update data */
+/* Process payload and update values*/
 function processMessage(data) {
     const current = Number(data.current);
     const elapsed = Number(data.elapsed_ms);
@@ -361,6 +361,7 @@ function processMessage(data) {
 
     valuesArray.push([current, dutyValue, elapsed]);
 }
+
 
 /* MQTT Functions and Handling */
 
@@ -399,28 +400,28 @@ client.on("message", (topic,message)=> {
 
 /* Download CSV */
 addEventListener(downloadCSVbutton.onclick = () => {
-// 1. Convert the nested array into a CSV string
-  const csvContent = valuesArray
-    .map(row => row.map(val => `"${String(val).replace(/"/g, '""')}"`).join(","))
-    .join("\n");
+    // Convert the nested array into a CSV string
+    const csvContent = valuesArray
+        .map(row => row.map(val => `"${String(val).replace(/"/g, '""')}"`).join(","))
+        .join("\n");
 
-  // 2. Create a Blob object with the CSV string
-  const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    // Create a Blob object with the CSV string
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
 
-  // 3. Create a temporary anchor element and trigger download
-  const link = document.createElement("a");
-  const url = URL.createObjectURL(blob);
-  
-  link.setAttribute("href", url);
-  link.setAttribute("download", filename);
-  link.style.visibility = 'hidden';
-  
-  document.body.appendChild(link);
-  link.click();
-  
-  // 4. Clean up the DOM and memory
-  document.body.removeChild(link);
-  URL.revokeObjectURL(url);
+    // Create a temporary anchor element and trigger download
+    const link = document.createElement("a");
+    const url = URL.createObjectURL(blob);
+    
+    link.setAttribute("href", url);
+    link.setAttribute("download", filename);
+    link.style.visibility = 'hidden';
+    
+    document.body.appendChild(link);
+    link.click();
+    
+    // Clean up the DOM and memory
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
 });
 
 </script>
